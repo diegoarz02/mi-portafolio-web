@@ -19,12 +19,12 @@ async function fetchProfileData() {
         
         const statsHtml = `
             <div class="stat-card">
-                <h3>${data.public_repos}</h3>
-                <p>Repositorios</p>
+                <h3>Top 10%</h3>
+                <p>Décimo Superior (UNMSM)</p>
             </div>
             <div class="stat-card">
-                <h3>${data.followers}</h3>
-                <p>Seguidores</p>
+                <h3>${data.public_repos}</h3>
+                <p>Modelos Open Source</p>
             </div>
         `;
         document.getElementById('github-stats').innerHTML = statsHtml;
@@ -32,12 +32,12 @@ async function fetchProfileData() {
         console.error('Error fetching profile:', error);
         document.getElementById('github-stats').innerHTML = `
             <div class="stat-card">
-                <h3>8+</h3>
-                <p>Repositorios</p>
+                <h3>Top 10%</h3>
+                <p>Décimo Superior (UNMSM)</p>
             </div>
             <div class="stat-card">
-                <h3>Data</h3>
-                <p>Curiosity</p>
+                <h3>8+</h3>
+                <p>Modelos Open Source</p>
             </div>
         `;
     }
