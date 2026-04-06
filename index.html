@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diego Araujo | Portfolio</title>
+    <meta name="description" content="Portafolio de proyectos de Diego Araujo. Data Science e IA.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js" crossorigin="anonymous"></script> <!-- Placeholder for icons, alternatively use SVG -->
+</head>
+<body>
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    
+    <nav class="navbar">
+        <div class="nav-content">
+            <div class="logo">Diego Araujo</div>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="https://github.com/diegoarz02" target="_blank" class="btn-primary">GitHub Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <span class="badge">Bienvenido a mi espacio</span>
+                <h1 class="glitch" data-text="Hola, soy Diego.">Hola, soy Diego.</h1>
+                <h2>Especialista en <span class="gradient-text">Data Science e IA</span></h2>
+                <p>Explora mi trabajo y proyectos recientes en el mundo de los datos y el aprendizaje automático.</p>
+                <div class="hero-actions">
+                    <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+                    <a href="https://github.com/diegoarz02" target="_blank" class="btn-secondary">Visitar GitHub</a>
+                </div>
+            </div>
+            <div class="hero-image-container">
+                <div class="glass-orb">
+                    <img src="https://avatars.githubusercontent.com/u/164945843?v=4" alt="Diego Araujo Profile" class="profile-img">
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre-mi" class="about">
+            <div class="section-title">
+                <h2>Sobre Mí</h2>
+                <p>Desarrollador apasionado por transformar datos en soluciones inteligentes.</p>
+            </div>
+            <div class="about-content glass-panel">
+                <div class="stats-grid" id="github-stats">
+                    <!-- Dynamic stats loaded here -->
+                    <div class="stat-card">
+                        <h3>Cargando...</h3>
+                        <p>Repositorios</p>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <p>Soy un profesional enfocado en Data Science y la Inteligencia Artificial. Me dedico a construir modelos analíticos, redes neuronales, proyectos de Machine Learning, y visualización de datos.</p>
+                    <p>A través de mis repositorios de GitHub podrás observar el código de varios modelos estadísticos y algoritmos de IA diseñados para solucionar problemas del mundo real.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="projects">
+            <div class="section-title">
+                <h2>Mis Proyectos</h2>
+                <p>Extraídos directamente desde GitHub</p>
+            </div>
+            
+            <!-- Loader -->
+            <div id="loader" class="loader-container">
+                <div class="spinner"></div>
+                <p>Cargando proyectos...</p>
+            </div>
+
+            <div class="projects-grid" id="projects-container">
+                <!-- Projects will be injected here via JavaScript -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; <span id="year"></span> Diego Araujo. Desarrollado con el poder de GitHub.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
