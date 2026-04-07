@@ -3,219 +3,310 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Araujo | Portafolio</title>
-    <meta name="description" content="Portafolio de Diego Araujo. Analítica Avanzada, Machine Learning e Inteligencia Artificial con propósito.">
+    <title>Diego Araujo | Data Scientist & ML Engineer</title>
+    <meta name="description" content="Portafolio de Diego Araujo — Data Scientist, ML Engineer e IA con propósito. UNMSM Décimo Superior, BCP.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="blob blob-1"></div>
-    <div class="blob blob-2"></div>
-    
-    <nav class="navbar">
+
+    <div class="cursor-dot" id="cursor-dot"></div>
+    <div class="cursor-ring" id="cursor-ring"></div>
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <canvas id="particle-canvas"></canvas>
+    <div class="aurora">
+        <div class="aurora-item a1"></div>
+        <div class="aurora-item a2"></div>
+        <div class="aurora-item a3"></div>
+    </div>
+
+    <nav class="navbar" id="navbar">
         <div class="nav-content">
-            <div class="logo">Diego Araujo</div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#sobre-mi">Conóceme</a></li>
-                <li><a href="#experiencia">Trayectoria</a></li>
-                <li><a href="#proyectos-destacados">Proyectos</a></li>
-                <li><a href="https://www.linkedin.com/in/diegoaraujo-data/" target="_blank" class="btn-primary">Conectar en LinkedIn</a></li>
+            <a href="#inicio" class="logo"><span class="bracket">&lt;</span>DA<span class="bracket">/&gt;</span></a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+                <li><a href="#experiencia" class="nav-link">Trayectoria</a></li>
+                <li><a href="#proyectos-destacados" class="nav-link">Proyectos</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="https://www.linkedin.com/in/diegoaraujo-data/" target="_blank" rel="noopener" class="btn-primary">LinkedIn</a></li>
             </ul>
         </div>
     </nav>
 
     <main>
+
+        <!-- HERO -->
         <section id="inicio" class="hero">
             <div class="hero-content">
-                <span class="badge">Estadística, Datos e Innovación</span>
-                <h1 class="glitch" data-text="¡Hola! Soy Diego.">¡Hola! Soy Diego.</h1>
-                <h2>Encontrando historias ocultas con <span class="gradient-text">Inteligencia Artificial</span></h2>
-                <p>Estudiante de Estadística y un apasionado total por transformar números fríos en soluciones reales. Me fascina crear modelos predictivos y analíticos que no solo funcionen en el papel, sino que resuelvan problemas tangibles del día a día.</p>
-                <div class="hero-actions">
+                <div class="hero-badge reveal" data-delay="100">
+                    <span class="badge-pulse"></span>
+                    Disponible · Practicante IA @ BCP
+                </div>
+                <h1 class="glitch reveal" data-text="¡Hola! Soy Diego." data-delay="300">¡Hola! Soy Diego.</h1>
+                <h2 class="hero-subtitle reveal" data-delay="450">
+                    Soy <span id="typewriter" class="gradient-text"></span><span class="cursor-blink">|</span>
+                </h2>
+                <p class="hero-desc reveal" data-delay="600">
+                    Estudiante de <strong>Estadística en UNMSM</strong>, Décimo Superior y Becario PRONABEC.
+                    Transformo datos en decisiones con ML, IA Generativa y Visión Computacional.
+                </p>
+                <div class="hero-actions reveal" data-delay="750">
                     <a href="#experiencia" class="btn-primary">Ver mi trabajo</a>
-                    <a href="https://github.com/diegoarz02" target="_blank" class="btn-secondary">Mi código en GitHub</a>
+                    <a href="https://github.com/diegoarz02" target="_blank" rel="noopener" class="btn-secondary">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                        GitHub
+                    </a>
+                </div>
+                <div class="hero-metrics reveal" data-delay="900">
+                    <div class="metric">
+                        <div class="metric-top"><span class="metric-num" data-target="91">0</span><span class="metric-unit">%</span></div>
+                        <span class="metric-desc">Precisión IA · BCP</span>
+                    </div>
+                    <div class="metric-sep"></div>
+                    <div class="metric">
+                        <div class="metric-top"><span class="metric-num" data-target="2">0</span><span class="metric-unit">+</span></div>
+                        <span class="metric-desc">Años experiencia</span>
+                    </div>
+                    <div class="metric-sep"></div>
+                    <div class="metric">
+                        <div class="metric-top metric-top--text">Top 10%</div>
+                        <span class="metric-desc">UNMSM</span>
+                    </div>
                 </div>
             </div>
-            <div class="hero-image-container">
-                <div class="glass-orb">
-                    <img src="profile.jpg" alt="Diego Araujo - Data Scientist" class="profile-img" onerror="this.src='https://avatars.githubusercontent.com/u/164945843?v=4'">
+
+            <div class="hero-visual reveal-right" data-delay="200">
+                <div class="profile-wrapper">
+                    <div class="profile-inner">
+                        <img src="profile.jpg" alt="Diego Araujo - Data Scientist" class="profile-img"
+                            onerror="this.src='https://avatars.githubusercontent.com/u/164945843?v=4'">
+                    </div>
                 </div>
+                <div class="float-tag tag-1">Python</div>
+                <div class="float-tag tag-2">ML / AI</div>
+                <div class="float-tag tag-3">Statistics</div>
+                <div class="profile-badge">● BCP</div>
             </div>
+
+            <a href="#sobre-mi" class="scroll-down" aria-label="Scroll down">
+                <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+                <span>Scroll</span>
+            </a>
         </section>
 
+        <!-- ABOUT -->
         <section id="sobre-mi" class="about">
-            <div class="section-title">
-                <h2>Cambiando el Mundo, un Dato a la Vez</h2>
-                <p>Mi filosofía y mis herramientas</p>
+            <div class="section-title reveal">
+                <span class="section-label">Sobre mí</span>
+                <h2>Cambiando el Mundo,<br>un Dato a la Vez</h2>
+                <p class="section-sub">Mi filosofía y mis herramientas</p>
             </div>
-            <div class="about-content glass-panel">
+            <div class="about-content glass-panel reveal">
                 <div class="about-text">
                     <h3>¿Quién soy realmente?</h3>
-                    <p>Mi aventura comenzó en las aulas de <strong>Estadística de la UNMSM</strong>, donde actualmente pertenezco al Décimo Superior. Gracias al esfuerzo constante, fui reconocido como becario de PRONABEC, lo que me empuja todos los días a dar un poco más de mí.</p>
-                    <p>No soy de los que solo escribe código y ya; me encanta entender el "por qué" de cada línea y diseñar su impacto sistémico. Mi paso por el <strong>Samsung Innovation Campus</strong> me abrió los ojos al inmenso ecosistema de los Grandes Datos, demostrándome que la tecnología solo cobra sentido cuando aporta innovación al tejido empresarial o social.</p>
-                    
-                    <h3 class="mt-2">Stack Tecnológico y Analítico</h3>
-                    <p>Dominio avanzado en lenguajes y arquitecturas de ingeniería y ciencia de datos listos para producción empresarial.</p>
+                    <p>Mi aventura comenzó en las aulas de <strong>Estadística de la UNMSM</strong>, donde pertenezco al Décimo Superior. Gracias al esfuerzo constante, fui reconocido como becario de <strong>PRONABEC</strong>, lo que me empuja a dar lo mejor de mí cada día.</p>
+                    <p>No soy de los que solo escribe código; me encanta entender el "por qué" de cada línea y diseñar su impacto sistémico. Mi paso por el <strong>Samsung Innovation Campus</strong> me abrió los ojos al ecosistema de los Grandes Datos: la tecnología solo cobra sentido cuando aporta innovación real.</p>
+                    <h3 class="mt-2">Stack Tecnológico</h3>
+                    <p>Dominio en lenguajes y arquitecturas de ciencia de datos e ingeniería de ML para producción.</p>
                     <div class="skills-container">
                         <span class="skill-tag">Python</span>
                         <span class="skill-tag">R</span>
                         <span class="skill-tag">SQL</span>
                         <span class="skill-tag">Machine Learning</span>
-                        <span class="skill-tag">Deep Learning / Neural Networks</span>
-                        <span class="skill-tag">Generative AI / Computer Vision</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Generative AI</span>
+                        <span class="skill-tag">Computer Vision</span>
                         <span class="skill-tag">Power BI</span>
                         <span class="skill-tag">Databricks / PySpark</span>
+                        <span class="skill-tag">FastAPI</span>
+                        <span class="skill-tag">TensorFlow</span>
+                        <span class="skill-tag">NLP</span>
                     </div>
                 </div>
-                
                 <div class="stats-grid" id="github-stats">
-                    <!-- Dynamic stats loaded here by script.js -->
+                    <!-- Injected by JS -->
                 </div>
             </div>
         </section>
 
+        <!-- EXPERIENCE -->
         <section id="experiencia" class="experience">
-            <div class="section-title">
+            <div class="section-title reveal">
+                <span class="section-label">Trayectoria</span>
                 <h2>Experiencia y Contribuciones</h2>
-                <p>Donde la analítica se encuentra con la estrategia corporativa</p>
+                <p class="section-sub">Donde la analítica se encuentra con la estrategia corporativa</p>
             </div>
             <div class="timeline">
-                <div class="timeline-item glass-panel-small">
+                <div class="timeline-item glass-panel-small reveal">
+                    <div class="timeline-marker"><div class="marker-dot active-dot"></div></div>
                     <span class="timeline-date">Ene 2026 – Presente</span>
                     <h3>Practicante Analítica Avanzada e IA</h3>
                     <h4>Banco de Crédito del Perú (BCP)</h4>
-                    <p>Participo en la ideación y despliegue arquitectónico de proyectos de NLP y ML. Lideré técnicamente la integración de una solución de <strong>Inteligencia Artificial Generativa y Visión Computacional</strong> (OCR Avanzado), elevando la exactitud de extracción y clasificación de auditoría a 91%. Transformé procesos manuales asíncronos en flujos inteligentes automatizados aportando directamente a la mitigación de riesgos operativos.</p>
+                    <p>Participo en la ideación y despliegue de proyectos de NLP y ML. Lideré técnicamente la integración de una solución de <strong>IA Generativa y Visión Computacional</strong> (OCR Avanzado), elevando la exactitud de extracción a <strong>91%</strong>. Automaticé flujos de auditoría, aportando directamente a la mitigación de riesgos operativos.</p>
+                    <div class="timeline-tags">
+                        <span>NLP</span><span>OCR</span><span>Gen AI</span><span>Computer Vision</span>
+                    </div>
                 </div>
-
-                <div class="timeline-item glass-panel-small">
+                <div class="timeline-item glass-panel-small reveal">
+                    <div class="timeline-marker"><div class="marker-dot"></div></div>
                     <span class="timeline-date">Mar 2025 – Oct 2025</span>
                     <h3>Practicante de Business Analytics</h3>
                     <h4>PRESTAMYPE</h4>
-                    <p>Consolidé la gobernanza de datos y la orquestación de información en el ecosistema crediticio. Construí pipelines ETL para centralizar registros dispersos y reestructuré el CRM, logrando una visión holística del cliente corporativo. Al inyectar rutinas de automatización en Python dentro de sus flujos financieros, incrementé significativamente el ancho de banda del equipo comercial al revelar patrones estratégicos accionables.</p>
+                    <p>Consolidé la gobernanza de datos en el ecosistema crediticio. Construí pipelines ETL para centralizar registros y reestructuré el CRM, logrando una visión holística del cliente. Automaticé flujos en Python, revelando patrones estratégicos accionables para el equipo comercial.</p>
+                    <div class="timeline-tags">
+                        <span>ETL</span><span>CRM</span><span>Python</span><span>Analytics</span>
+                    </div>
                 </div>
-
-                <div class="timeline-item glass-panel-small">
+                <div class="timeline-item glass-panel-small reveal">
+                    <div class="timeline-marker"><div class="marker-dot"></div></div>
                     <span class="timeline-date">Ago 2023 – Sep 2024</span>
                     <h3>Coordinador de Proyectos</h3>
                     <h4>GREMO</h4>
-                    <p>Liderazgo de grupos multidisciplinarios universitarios aplicando metodología estadística rigurosa al estudio analítico del comportamiento humano. Esta experiencia consolidó mi visión estratégica para la extracción de causalidades en entornos bajo incertidumbre.</p>
+                    <p>Lideré grupos multidisciplinarios aplicando metodología estadística rigurosa al estudio del comportamiento humano. Esta experiencia consolidó mi visión estratégica para la extracción de causalidades en entornos de alta incertidumbre.</p>
+                    <div class="timeline-tags">
+                        <span>Estadística</span><span>Liderazgo</span><span>Investigación</span>
+                    </div>
                 </div>
             </div>
         </section>
 
+        <!-- FEATURED PROJECTS -->
         <section id="proyectos-destacados" class="featured-projects">
-            <div class="section-title">
+            <div class="section-title reveal">
+                <span class="section-label">Proyectos</span>
                 <h2>Casos de Estudio Excepcionales</h2>
-                <p>Arquitecturas predictivas y soluciones de alto impacto</p>
+                <p class="section-sub">Arquitecturas predictivas y soluciones de alto impacto</p>
             </div>
             <div class="projects-grid">
-                
-                <!-- Redes Neuronales -->
-                <div class="project-card highlight-card">
+
+                <div class="project-card highlight-card tilt-card reveal" data-delay="0">
                     <div class="project-header">
                         <div class="project-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 16 16 12 12 8"></polyline><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
                         </div>
-                        <div class="project-links">
-                            <a href="https://proyecto-redes-neuronales.onrender.com/" target="_blank" title="Ver App en Vivo">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
-                        </div>
+                        <a href="https://proyecto-redes-neuronales.onrender.com/" target="_blank" rel="noopener" class="link-btn">Live <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
                     </div>
                     <h3 class="project-title">Hub Interactivo Deep Learning</h3>
-                    <p class="project-description"><strong>Problema: </strong>Entender la abstracción matemática dentro de redes de "caja negra".<br><strong>Implementación: </strong>Desarrollé una API en FastAPI que sirve modelos neuronales profundos (MLP, CNN, RNN) evaluados frente al complejo conjunto de datos Fashion-MNIST. <br><strong>Impacto: </strong>Consolidé un lienzo web de inferencia a tiempo real que desentraña y explica el razonamiento algorítmico a través de capas ocultas, validando robustez técnica de modelamiento.</p>
+                    <div class="project-tech-tags"><span>TensorFlow</span><span>FastAPI</span><span>Fashion-MNIST</span></div>
+                    <p class="project-description">API en FastAPI que sirve modelos profundos (MLP, CNN, RNN) sobre Fashion-MNIST. Lienzo web de inferencia en tiempo real que desentraña el razonamiento algorítmico a través de capas ocultas, validando la robustez técnica del modelamiento.</p>
                     <div class="project-footer">
-                        <div class="project-language"><span class="language-dot lang-Python"></span> TensorFlow / FastAPI / WebOps</div>
+                        <div class="project-language"><span class="language-dot lang-Python"></span>Python · Deep Learning</div>
                     </div>
                 </div>
 
-                <!-- Indice Sintetico -->
-                <div class="project-card highlight-card">
+                <div class="project-card highlight-card tilt-card reveal" data-delay="100">
                     <div class="project-header">
                         <div class="project-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
                         </div>
-                        <div class="project-links">
-                            <a href="https://rpubs.com/diegoaaraujo24003/1397209" target="_blank" title="Leer Reporte Oficial">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
-                        </div>
+                        <a href="https://rpubs.com/diegoaaraujo24003/1397209" target="_blank" rel="noopener" class="link-btn">Reporte <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
                     </div>
                     <h3 class="project-title">Índice Cuantitativo de Pobreza Educativa</h3>
-                    <p class="project-description"><strong>Problema: </strong>Ausencia de métricas geoespaciales precisas para enfocar programas de ayuda nacional.<br><strong>Implementación: </strong>Empleé Analítica de Escalamiento Óptimo y Análisis de Correspondencias Múltiples (ACM) para consolidar millones de registros de hogares peruanos en un solo coeficiente multidimensional. <br><strong>Impacto: </strong>Visualicé exitosamente las brechas territoriales mapeando el Perú, aportando un dashboard capaz de guiar e priorizar políticas públicas.</p>
+                    <div class="project-tech-tags"><span>R</span><span>ACM</span><span>Geoespacial</span></div>
+                    <p class="project-description">Escalamiento Óptimo y Análisis de Correspondencias Múltiples sobre millones de registros de hogares peruanos, consolidados en un coeficiente multidimensional. Dashboard con mapas de brechas territoriales para guiar políticas públicas con precisión.</p>
                     <div class="project-footer">
-                        <div class="project-language"><span class="language-dot lang-R"></span> R / Cartografía de Datos</div>
+                        <div class="project-language"><span class="language-dot lang-R"></span>R · Cartografía de Datos</div>
                     </div>
                 </div>
 
-                <!-- K-Means -->
-                <div class="project-card highlight-card">
+                <div class="project-card highlight-card tilt-card reveal" data-delay="200">
                     <div class="project-header">
                         <div class="project-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/diegoarz02/K-means/blob/main/GLN_KMN.pdf" target="_blank" title="Leer Documentación Oficial">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
-                        </div>
+                        <a href="https://github.com/diegoarz02/K-means/blob/main/GLN_KMN.pdf" target="_blank" rel="noopener" class="link-btn">Docs <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
                     </div>
                     <h3 class="project-title">Motor Algorítmico K-Means</h3>
-                    <p class="project-description"><strong>Problema: </strong>Fragmentación en mercados que dificulta realizar estrategias y ofertas al consumidor de Lima Norte.<br><strong>Implementación: </strong>Ingeniería de variables (Feature Engineering) combinada con el algoritmo no supervisado K-Means sobre la extensa matriz de datos ENAPREF. Resolví eficientemente la dimensionalidad del data warehouse.<br><strong>Impacto: </strong>Permite clasificar consumidores con precisión clínica, otorgando hallazgos trascendentales y perfiles de consumo optimizados para inteligencia comercial corporativa.</p>
+                    <div class="project-tech-tags"><span>Python</span><span>K-Means</span><span>ENAPREF</span></div>
+                    <p class="project-description">Feature Engineering sobre la matriz ENAPREF combinada con K-Means no supervisado para segmentar mercados de Lima Norte. Clasifica consumidores con precisión clínica, aportando inteligencia comercial y perfiles de consumo optimizados.</p>
                     <div class="project-footer">
-                        <div class="project-language"><span class="language-dot lang-Jupyter"></span> Unsupervised ML Pipeline</div>
+                        <div class="project-language"><span class="language-dot lang-Jupyter"></span>Unsupervised ML Pipeline</div>
                     </div>
                 </div>
 
-                <!-- Riesgo de Infarto -->
-                <div class="project-card highlight-card">
+                <div class="project-card highlight-card tilt-card reveal" data-delay="300">
                     <div class="project-header">
                         <div class="project-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                         </div>
-                        <div class="project-links">
-                            <a href="https://github.com/diegoarz02/Modelo-de-Prediccion-de-riesgo-de-infarto/blob/main/ARAUJO_DIEGO_PROYECTO_FINAL_DS.ipynb" target="_blank" title="Ver Código Jupyter File">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                            </a>
-                        </div>
+                        <a href="https://github.com/diegoarz02/Modelo-de-Prediccion-de-riesgo-de-infarto/blob/main/ARAUJO_DIEGO_PROYECTO_FINAL_DS.ipynb" target="_blank" rel="noopener" class="link-btn">Notebook <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></a>
                     </div>
-                    <h3 class="project-title">Forecasting de Riesgo Coronario Preventivo</h3>
-                    <p class="project-description"><strong>Problema: </strong>Sistemas de salud reactivos ante crisis hospitalarias.<br><strong>Implementación: </strong>Pipeline completo de Machine Learning (Limpieza de Nulos, SMOTE y Gradient Boosting Methods en historiales clínicos crudos) capaz de procesar anomalías biológicas del pre-diagnóstico.<br><strong>Impacto: </strong>Generación de modelos de alerta temprana con asertividad competitiva, propiciando infraestructura digital que fomenta diagnósticos eficientes y prevención sistemática, listos para integrarse en startups de Salud Tech.</p>
+                    <h3 class="project-title">Forecasting de Riesgo Coronario</h3>
+                    <div class="project-tech-tags"><span>SMOTE</span><span>Gradient Boosting</span><span>HealthTech</span></div>
+                    <p class="project-description">Pipeline completo de ML (SMOTE + Gradient Boosting) sobre historiales clínicos para modelos de alerta temprana cardíaca. Infraestructura digital lista para integrarse en startups de Salud Tech con diagnósticos preventivos eficientes.</p>
                     <div class="project-footer">
-                        <div class="project-language"><span class="language-dot lang-Jupyter"></span> Predictive AI / HealthTech</div>
+                        <div class="project-language"><span class="language-dot lang-Jupyter"></span>Predictive AI · HealthTech</div>
                     </div>
                 </div>
 
             </div>
         </section>
 
+        <!-- GITHUB REPOS -->
         <section id="repositorios" class="projects">
-            <div class="section-title">
-                <h2>Laboratorio I+D de Open Source</h2>
-                <p>Monitor de Actividad e Integración Continua sobre mi GitHub</p>
+            <div class="section-title reveal">
+                <span class="section-label">Open Source</span>
+                <h2>Laboratorio I+D</h2>
+                <p class="section-sub">Actividad e Integración Continua — GitHub</p>
             </div>
-            
             <div id="loader" class="loader-container">
                 <div class="spinner"></div>
-                <p>Estableciendo túnel de conexión con GitHub API V3...</p>
+                <p>Conectando con GitHub API...</p>
             </div>
+            <div class="projects-grid" id="projects-container"></div>
+        </section>
 
-            <div class="projects-grid" id="projects-container">
-                <!-- Repos injected here via JS -->
+        <!-- CONTACT -->
+        <section id="contacto" class="contact">
+            <div class="section-title reveal">
+                <span class="section-label">Contacto</span>
+                <h2>¿Trabajamos Juntos?</h2>
+                <p class="section-sub">Abierto a proyectos desafiantes, colaboraciones y oportunidades</p>
+            </div>
+            <div class="contact-container reveal">
+                <p class="contact-tagline">
+                    Si tienes un proyecto de datos, una idea con IA o simplemente quieres conectar,<br>estoy a un mensaje de distancia.
+                </p>
+                <div class="contact-links">
+                    <a href="https://www.linkedin.com/in/diegoaraujo-data/" target="_blank" rel="noopener" class="contact-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        Conectar en LinkedIn
+                    </a>
+                    <a href="https://github.com/diegoarz02" target="_blank" rel="noopener" class="contact-btn contact-btn-ghost">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                        Ver en GitHub
+                    </a>
+                </div>
             </div>
         </section>
+
     </main>
 
     <footer>
         <div class="footer-content">
-            <p>&copy; <span id="year"></span> Soluciones algorítmicas diseñadas por Diego Araujo.</p>
+            <div class="footer-logo"><span class="bracket">&lt;</span>DA<span class="bracket">/&gt;</span></div>
+            <p>Soluciones algorítmicas diseñadas con propósito · Diego Araujo © <span id="year"></span></p>
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/diegoaraujo-data/" target="_blank">LinkedIn Profesional</a>
-                <a href="https://github.com/diegoarz02" target="_blank">Entorno GitHub</a>
+                <a href="https://www.linkedin.com/in/diegoaraujo-data/" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                </a>
+                <a href="https://github.com/diegoarz02" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+                </a>
             </div>
         </div>
     </footer>
+
+    <button class="back-to-top" id="back-to-top" aria-label="Volver arriba">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
 
     <script src="script.js"></script>
 </body>
