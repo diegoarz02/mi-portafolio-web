@@ -1028,4 +1028,186 @@ footer {
     .projects-grid { grid-template-columns: 1fr; }
     .stats-grid { grid-template-columns: 1fr 1fr; }
     .contact-container { padding: 1.5rem 1rem; }
+    .certs-grid { grid-template-columns: 1fr; }
+    .hero-actions { flex-direction: column; align-items: flex-start; }
+    .btn-cv { width: fit-content; }
+}
+
+/* ==========================================
+   CV DOWNLOAD BUTTON
+   ========================================== */
+.btn-cv {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.62rem 1.35rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: var(--transition);
+    cursor: pointer;
+    border: 1.5px solid rgba(20, 184, 166, 0.35);
+    color: var(--secondary);
+    background: rgba(20, 184, 166, 0.05);
+    text-decoration: none;
+}
+.btn-cv:hover {
+    background: rgba(20, 184, 166, 0.14);
+    border-color: var(--secondary);
+    box-shadow: 0 0 22px rgba(20, 184, 166, 0.22);
+    transform: translateY(-2px);
+}
+
+/* ==========================================
+   BADGE INTERNACIONAL (MATSUO LAB)
+   ========================================== */
+.badge-intl {
+    display: inline-block;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 0.18rem 0.6rem;
+    border-radius: 20px;
+    background: rgba(217, 70, 239, 0.12);
+    border: 1px solid rgba(217, 70, 239, 0.35);
+    color: var(--accent);
+    vertical-align: middle;
+    margin-left: 0.45rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    font-family: var(--font-body);
+}
+
+/* ==========================================
+   LANGUAGES IN ABOUT
+   ========================================== */
+.lang-items {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    margin-top: 0.75rem;
+}
+.lang-item {
+    display: flex;
+    align-items: center;
+    gap: 0.65rem;
+    padding: 0.6rem 1rem;
+    background: var(--bg-glass);
+    border: 1px solid var(--border-glass);
+    border-radius: 12px;
+    transition: var(--transition);
+}
+.lang-item:hover {
+    border-color: var(--border-accent);
+    background: rgba(129, 140, 248, 0.05);
+}
+.lang-icon { color: var(--primary); flex-shrink: 0; }
+.lang-name {
+    display: block;
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: var(--text-main);
+}
+.lang-level {
+    display: block;
+    font-size: 0.73rem;
+    color: var(--text-muted);
+    margin-top: 0.05rem;
+}
+
+/* ==========================================
+   CERTIFICATIONS SECTION
+   ========================================== */
+.certifications { padding: 6rem 0; }
+
+.certs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 0.85rem;
+}
+
+.cert-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.1rem 1.3rem;
+    background: var(--bg-card);
+    border: 1px solid var(--border-glass);
+    border-radius: 14px;
+    transition: var(--transition);
+    text-decoration: none;
+    color: inherit;
+    cursor: default;
+}
+a.cert-card { cursor: pointer; }
+.cert-card:hover {
+    border-color: var(--border-accent);
+    transform: translateY(-4px);
+    box-shadow: var(--glow-primary), var(--shadow-card);
+}
+
+.cert-icon-wrap {
+    width: 42px;
+    height: 42px;
+    border-radius: 11px;
+    background: rgba(129, 140, 248, 0.1);
+    border: 1px solid rgba(129, 140, 248, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--primary);
+}
+.cert-icon-wrap.cert-icon--secondary {
+    background: rgba(20, 184, 166, 0.09);
+    border-color: rgba(20, 184, 166, 0.2);
+    color: var(--secondary);
+}
+.cert-icon-wrap.cert-icon--accent {
+    background: rgba(217, 70, 239, 0.09);
+    border-color: rgba(217, 70, 239, 0.2);
+    color: var(--accent);
+}
+
+.cert-info { flex: 1; min-width: 0; }
+.cert-info h4 {
+    font-size: 0.855rem;
+    font-weight: 600;
+    color: var(--text-main);
+    line-height: 1.35;
+    margin-bottom: 0.22rem;
+}
+.cert-issuer {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--primary);
+    font-weight: 500;
+}
+.cert-date {
+    display: block;
+    font-size: 0.7rem;
+    color: var(--text-dim);
+    margin-top: 0.1rem;
+}
+
+.cert-link-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    background: rgba(129, 140, 248, 0.08);
+    border: 1px solid rgba(129, 140, 248, 0.18);
+    color: var(--primary);
+    flex-shrink: 0;
+    transition: var(--transition);
+}
+a.cert-card:hover .cert-link-btn {
+    background: rgba(129, 140, 248, 0.2);
+    border-color: var(--primary);
+}
+
+@media (max-width: 768px) {
+    .certs-grid { grid-template-columns: 1fr; }
+    .lang-items { flex-direction: column; }
 }

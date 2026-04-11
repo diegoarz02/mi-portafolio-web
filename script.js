@@ -255,7 +255,7 @@ async function fetchProfile() {
         <div class="stat-card"><h3>Top 10%</h3><p>Décimo Superior · UNMSM</p></div>
         <div class="stat-card"><h3>8+</h3><p>Repos Open Source</p></div>
         <div class="stat-card"><h3>PRONABEC</h3><p>Becario del Estado</p></div>
-        <div class="stat-card"><h3>BCP</h3><p>Practicante IA · 2026</p></div>`;
+        <div class="stat-card"><h3>Tokyo</h3><p>Matsuo Lab · U. de Tokyo</p></div>`;
     try {
         const res  = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}`);
         if (!res.ok) throw new Error();
@@ -264,7 +264,7 @@ async function fetchProfile() {
             <div class="stat-card"><h3>Top 10%</h3><p>Décimo Superior · UNMSM</p></div>
             <div class="stat-card"><h3>${data.public_repos}</h3><p>Repos Open Source</p></div>
             <div class="stat-card"><h3>PRONABEC</h3><p>Becario del Estado</p></div>
-            <div class="stat-card"><h3>BCP</h3><p>Practicante IA · 2026</p></div>`;
+            <div class="stat-card"><h3>Tokyo</h3><p>Matsuo Lab · U. de Tokyo</p></div>`;
     } catch {
         grid.innerHTML = fallback;
     }
