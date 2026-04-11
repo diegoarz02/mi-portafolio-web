@@ -1,763 +1,609 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diego Araujo | Data Scientist & ML Engineer</title>
-    <meta name="description" content="Portafolio de Diego Araujo — Data Scientist, ML Engineer e IA. UNMSM Top 10%, BCP, Matsuo Lab - University of Tokyo.">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diego Araujo | Data Scientist & ML Engineer</title>
+  <meta name="description" content="Portafolio de Diego Araujo — Data Scientist, ML Engineer e IA. UNMSM Top 10%, BCP, Matsuo Lab - Universidad de Tokyo.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="scroll-progress" id="scroll-progress"></div>
+<main>
 
-    <!-- ===== NAVBAR ===== -->
-    <nav class="navbar" id="navbar">
-        <div class="nav-container">
-            <a href="#inicio" class="logo">&lt;DA/&gt;</a>
-            <ul class="nav-links" id="nav-links">
-                <li><a href="#sobre-mi"    class="nav-link">Acerca de</a></li>
-                <li><a href="#habilidades" class="nav-link">Habilidades</a></li>
-                <li><a href="#trayectoria" class="nav-link">Trayectoria</a></li>
-                <li><a href="#proyectos"   class="nav-link">Proyectos</a></li>
-                <li><a href="#certificados"  class="nav-link">Certificados</a></li>
-                <li><a href="#investigacion" class="nav-link">Investigación</a></li>
-                <li><a href="#contacto"     class="nav-link">Contacto</a></li>
-            </ul>
-            <div class="nav-end">
-                <a href="Diego_Araujo_curriculum.pdf" download class="btn-cv">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    Descargar CV
-                </a>
-                <button class="hamburger" id="hamburger" aria-label="Menú">
-                    <span></span><span></span><span></span>
-                </button>
-            </div>
-        </div>
+  <!-- ===== SIDEBAR ===== -->
+  <aside class="sidebar" data-sidebar>
+
+    <div class="sidebar-info">
+      <figure class="avatar-box">
+        <img src="profile.jpg" alt="Diego Araujo" width="80">
+      </figure>
+      <div class="info-content">
+        <h1 class="name">Diego Araujo</h1>
+        <p class="title-pill">
+          <span id="typewriter"></span><span class="type-cursor">|</span>
+        </p>
+      </div>
+      <button class="info_more-btn" data-sidebar-btn>
+        <span>Mostrar contactos</span>
+        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><polyline points="6 9 12 15 18 9"/></svg>
+      </button>
+    </div>
+
+    <div class="sidebar-info_more">
+      <div class="separator"></div>
+
+      <ul class="contacts-list">
+        <li class="contact-item">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Email</p>
+            <a href="mailto:diegoalonso.araujo24@gmail.com" class="contact-link">diegoalonso.araujo24@gmail.com</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">WhatsApp</p>
+            <a href="https://wa.me/51955101937" target="_blank" class="contact-link">+51 955 101 937</a>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Ubicación</p>
+            <address>Lima, Perú</address>
+          </div>
+        </li>
+        <li class="contact-item">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+          </div>
+          <div class="contact-info">
+            <p class="contact-title">Disponibilidad</p>
+            <time>Tiempo parcial · Remoto</time>
+          </div>
+        </li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <ul class="social-list">
+        <li>
+          <a href="https://www.linkedin.com/in/diegoaraujo-data/" target="_blank" rel="noopener" class="social-link" title="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://github.com/diegoarz02" target="_blank" rel="noopener" class="social-link" title="GitHub">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </a>
+        </li>
+        <li>
+          <a href="mailto:diegoalonso.araujo24@gmail.com" class="social-link" title="Email">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
+          </a>
+        </li>
+      </ul>
+
+      <div class="separator"></div>
+
+      <a href="Diego_Araujo_curriculum.pdf" download class="btn-cv">
+        <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+        Descargar CV
+      </a>
+    </div>
+
+  </aside>
+
+  <!-- ===== MAIN CONTENT ===== -->
+  <div class="main-content">
+
+    <!-- Tab Navigation -->
+    <nav class="navbar">
+      <ul class="navbar-list">
+        <li><button class="navbar-link active" data-nav-link data-target="about">Acerca de</button></li>
+        <li><button class="navbar-link" data-nav-link data-target="resume">Currículum</button></li>
+        <li><button class="navbar-link" data-nav-link data-target="portfolio">Portafolio</button></li>
+        <li><button class="navbar-link" data-nav-link data-target="certificates">Certificados</button></li>
+        <li><button class="navbar-link" data-nav-link data-target="research">Investigación</button></li>
+        <li><button class="navbar-link" data-nav-link data-target="contact">Contacto</button></li>
+      </ul>
     </nav>
 
-    <!-- ===== HERO / INICIO ===== -->
-    <section id="inicio" class="hero">
-        <div class="hero-text">
-            <span class="badge-available">
-                <span class="badge-dot"></span>
-                Disponible para oportunidades
-            </span>
-            <h1>Hola, soy <span class="text-primary">Diego Araujo</span></h1>
-            <p class="hero-role">
-                <span id="typewriter"></span><span class="type-cursor">|</span>
-            </p>
-            <p class="hero-bio">
-                Estudiante de <strong>Estadística en UNMSM</strong> (9no semestre, Décimo Superior) y Becario <strong>PRONABEC</strong>.
-                Practicante en el <strong>BCP</strong> y participante del programa de Data Science del
-                <strong>Matsuo Lab · Universidad de Tokyo</strong>. Transformo datos en decisiones con ML, IA Generativa y Analítica Avanzada.
-            </p>
-            <div class="hero-socials">
-                <a href="https://www.linkedin.com/in/diegoaraujo-data/" target="_blank" rel="noopener" class="social-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                    LinkedIn
-                </a>
-                <a href="https://github.com/diegoarz02" target="_blank" rel="noopener" class="social-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                    GitHub
-                </a>
-                <a href="mailto:diegoalonso.araujo24@gmail.com" class="social-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
-                    Email
-                </a>
-                <a href="tel:+51955101937" class="social-pill">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                    WhatsApp
-                </a>
-            </div>
-            <div class="hero-metrics">
-                <div class="hm-item">
-                    <strong>Top 10%</strong>
-                    <span>UNMSM</span>
-                </div>
-                <div class="hm-sep"></div>
-                <div class="hm-item">
-                    <strong>3+</strong>
-                    <span>Años exp.</span>
-                </div>
-                <div class="hm-sep"></div>
-                <div class="hm-item">
-                    <strong>PRONABEC</strong>
-                    <span>Becario</span>
-                </div>
-                <div class="hm-sep"></div>
-                <div class="hm-item">
-                    <strong>Tokyo</strong>
-                    <span>Matsuo Lab</span>
-                </div>
-            </div>
-        </div>
-        <div class="hero-photo">
-            <div class="photo-ring">
-                <img src="profile.jpg" alt="Diego Araujo — Data Scientist"
-                    onerror="this.src='https://avatars.githubusercontent.com/u/164945843?v=4'">
-            </div>
-            <span class="ftag ftag-1">Python</span>
-            <span class="ftag ftag-2">ML / AI</span>
-            <span class="ftag ftag-3">Statistics</span>
-        </div>
-    </section>
-
     <!-- ===== ABOUT ===== -->
-    <section id="sobre-mi" class="about">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="sec-label">Acerca de mí</span>
-                <h2>¿Quién soy?</h2>
-            </div>
-            <div class="about-layout">
-                <div class="about-bio reveal">
-                    <p>Soy estudiante de <strong>Estadística en la Universidad Nacional Mayor de San Marcos</strong> (9no semestre, Décimo Superior), Becario <strong>PRONABEC</strong> por alto rendimiento académico. Cuento con experiencia en analítica avanzada e inteligencia artificial aplicada al sector financiero dentro del <strong>Banco de Crédito del Perú (BCP)</strong>.</p>
-                    <p>Actualmente participo en el programa de Data Science del <strong>Matsuo Institute · Universidad de Tokyo</strong>, uno de los laboratorios de IA más influyentes del mundo liderado por el Prof. Yutaka Matsuo. Soy egresado del <strong>Samsung Innovation Campus</strong> en Big Data & Artificial Intelligence.</p>
-                    <p>Mi pasión está en transformar datos complejos en narrativas claras y soluciones con impacto real, combinando ML, Deep Learning, NLP e IA Generativa con visión estratégica de negocio.</p>
-                    <div class="bio-details">
-                        <div class="bio-row">
-                            <span class="bio-key">Ubicación</span>
-                            <span class="bio-val">Lima, Perú</span>
-                        </div>
-                        <div class="bio-row">
-                            <span class="bio-key">Idiomas</span>
-                            <span class="bio-val">Español (Nativo) · Inglés (B2)</span>
-                        </div>
-                        <div class="bio-row">
-                            <span class="bio-key">Universidad</span>
-                            <span class="bio-val">UNMSM · Estadística · 9no sem.</span>
-                        </div>
-                        <div class="bio-row">
-                            <span class="bio-key">Estado</span>
-                            <span class="bio-val"><span class="status-dot"></span>Disponible</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="services reveal">
-                    <h3>Lo que hago</h3>
-                    <div class="services-grid">
-                        <div class="svc-card">
-                            <div class="svc-icon svc-indigo">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a5 5 0 0 1 5 5c0 2.76-2.24 5-5 5S7 9.76 7 7a5 5 0 0 1 5-5z"/><path d="M3 21c0-4.418 4.03-8 9-8s9 3.582 9 8"/><line x1="18" y1="8" x2="22" y2="12"/><line x1="22" y1="8" x2="18" y2="12"/></svg>
-                            </div>
-                            <h4>Machine Learning &amp; Predictive AI</h4>
-                            <p>Diseño y despliegue de modelos predictivos, clasificación, regresión y forecasting orientados a decisiones estratégicas de negocio.</p>
-                        </div>
-                        <div class="svc-card">
-                            <div class="svc-icon svc-violet">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                            </div>
-                            <h4>Generative AI &amp; NLP</h4>
-                            <p>Soluciones con LLMs, procesamiento de lenguaje natural, IA Generativa, OCR avanzado y análisis inteligente de documentos.</p>
-                        </div>
-                        <div class="svc-card">
-                            <div class="svc-icon svc-cyan">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                            </div>
-                            <h4>Data Engineering &amp; ETL</h4>
-                            <p>Construcción de pipelines de datos, integración con Databricks/PySpark, arquitecturas cloud y automatización de procesos.</p>
-                        </div>
-                        <div class="svc-card">
-                            <div class="svc-icon svc-emerald">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                            </div>
-                            <h4>Business Analytics &amp; Viz</h4>
-                            <p>Dashboards estratégicos en Power BI, análisis de KPIs, inteligencia de negocio y modelos estadísticos para toma de decisiones.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+    <article class="about active" data-page="about">
+      <header>
+        <h2 class="h2 article-title">Acerca de mí</h2>
+      </header>
+
+      <div class="metrics-row">
+        <div class="metric-card">
+          <span class="metric-value">Top 10%</span>
+          <span class="metric-label">UNMSM</span>
         </div>
-    </section>
-
-    <!-- ===== SKILLS ===== -->
-    <section id="habilidades" class="skills">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="sec-label">Habilidades</span>
-                <h2>Stack Tecnológico</h2>
-                <p class="sec-desc">Tecnologías y herramientas con las que trabajo a diario</p>
-            </div>
-            <div class="skills-grid">
-
-                <div class="skill-group reveal">
-                    <h3 class="sg-title"><span class="sg-dot dot-indigo"></span>Lenguajes</h3>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>Python</span><span class="sb-pct">95%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="95"></div></div>
-                    </div>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>SQL</span><span class="sb-pct">88%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="88"></div></div>
-                    </div>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>R</span><span class="sb-pct">86%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="86"></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-group reveal">
-                    <h3 class="sg-title"><span class="sg-dot dot-violet"></span>ML / Inteligencia Artificial</h3>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>Machine Learning</span><span class="sb-pct">92%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="92"></div></div>
-                    </div>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>Deep Learning</span><span class="sb-pct">89%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="89"></div></div>
-                    </div>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>Generative AI &amp; LLMs</span><span class="sb-pct">88%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="88"></div></div>
-                    </div>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>NLP / Computer Vision</span><span class="sb-pct">86%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="86"></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-group reveal">
-                    <h3 class="sg-title"><span class="sg-dot dot-cyan"></span>Datos &amp; Cloud</h3>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>Databricks / PySpark</span><span class="sb-pct">87%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="87"></div></div>
-                    </div>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>Big Data &amp; ETL</span><span class="sb-pct">87%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="87"></div></div>
-                    </div>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>FastAPI</span><span class="sb-pct">85%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="85"></div></div>
-                    </div>
-                </div>
-
-                <div class="skill-group reveal">
-                    <h3 class="sg-title"><span class="sg-dot dot-emerald"></span>Analytics &amp; Visualización</h3>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>Power BI</span><span class="sb-pct">88%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="88"></div></div>
-                    </div>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>Análisis Estadístico</span><span class="sb-pct">92%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="92"></div></div>
-                    </div>
-                    <div class="skill-bar-item">
-                        <div class="sb-header"><span>Advanced Analytics</span><span class="sb-pct">90%</span></div>
-                        <div class="sb-track"><div class="sb-fill" data-pct="90"></div></div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="metric-card">
+          <span class="metric-value">3+</span>
+          <span class="metric-label">Años exp.</span>
         </div>
-    </section>
-
-    <!-- ===== TRAYECTORIA ===== -->
-    <section id="trayectoria" class="timeline-section">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="sec-label">Trayectoria</span>
-                <h2>Experiencia y Educación</h2>
-            </div>
-            <div class="tl-cols">
-
-                <!-- EDUCACIÓN -->
-                <div class="tl-col reveal">
-                    <h3 class="tl-col-title">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                        Educación
-                    </h3>
-                    <div class="tl-line">
-
-                        <div class="tl-item active">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content">
-                                <span class="tl-date">Abr 2026 – Presente</span>
-                                <h4>Data Science Program <span class="badge-intl">Internacional</span></h4>
-                                <p class="tl-org">Matsuo Institute · Universidad de Tokyo, Japón</p>
-                                <p>Seleccionado para el programa del Prof. Yutaka Matsuo, referente mundial en IA. Especialización en Deep Learning, LLMs y soluciones de frontera tecnológica.</p>
-                            </div>
-                        </div>
-
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content">
-                                <span class="tl-date">2022 – Presente</span>
-                                <h4>Estadística</h4>
-                                <p class="tl-org">Universidad Nacional Mayor de San Marcos</p>
-                                <p>9no semestre. Décimo Superior. Becario PRONABEC — Beca Permanencia por alto rendimiento académico.</p>
-                            </div>
-                        </div>
-
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content">
-                                <span class="tl-date">May 2025 – Nov 2025</span>
-                                <h4>Big Data &amp; Artificial Intelligence</h4>
-                                <p class="tl-org">Samsung Innovation Campus</p>
-                                <p>Formación intensiva en Big Data, Machine Learning y análisis de datos aplicados a inteligencia artificial.</p>
-                            </div>
-                        </div>
-
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content">
-                                <span class="tl-date">Mar 2024</span>
-                                <h4>Introduction to Business Intelligence</h4>
-                                <p class="tl-org">Universidad Nacional Mayor de San Marcos</p>
-                                <p>Fundamentos de analítica de negocios, visualización de datos y toma de decisiones basada en datos.</p>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <!-- EXPERIENCIA -->
-                <div class="tl-col reveal">
-                    <h3 class="tl-col-title">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                        Experiencia
-                    </h3>
-                    <div class="tl-line">
-
-                        <div class="tl-item active">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content">
-                                <span class="tl-date">Abr 2026 – Presente</span>
-                                <h4>Practicante Analytics Translator</h4>
-                                <p class="tl-org">Banco de Crédito del Perú (BCP) · COE Advanced Analytics</p>
-                                <p>Nexo estratégico entre equipos técnicos de datos y unidades de negocio. Destilo modelos e insights complejos en narrativas claras y decisiones accionables.</p>
-                                <div class="tl-tags"><span>Advanced Analytics</span><span>AI Strategy</span><span>ML</span></div>
-                            </div>
-                        </div>
-
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content">
-                                <span class="tl-date">Ene 2026 – Abr 2026</span>
-                                <h4>Practicante Analítica Avanzada e IA</h4>
-                                <p class="tl-org">Banco de Crédito del Perú (BCP)</p>
-                                <p>Implementé IA Generativa y Computer Vision (OCR avanzado) logrando <strong>91% de precisión en extracción de datos</strong>. Desplegué modelos NLP y ML en producción.</p>
-                                <div class="tl-tags"><span>NLP</span><span>OCR</span><span>Gen AI</span><span>Vision</span></div>
-                            </div>
-                        </div>
-
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content">
-                                <span class="tl-date">Mar 2025 – Oct 2025</span>
-                                <h4>Practicante de Business Analytics</h4>
-                                <p class="tl-org">PRESTAMYPE</p>
-                                <p>Construí pipelines ETL, dashboards Power BI para KPIs de cartera crediticia y automaticé reportes financieros con Python, generando ahorros significativos de tiempo.</p>
-                                <div class="tl-tags"><span>ETL</span><span>Power BI</span><span>Python</span><span>CRM</span></div>
-                            </div>
-                        </div>
-
-                        <div class="tl-item">
-                            <div class="tl-dot"></div>
-                            <div class="tl-content">
-                                <span class="tl-date">Ago 2023 – Sep 2024</span>
-                                <h4>Coordinador de Proyectos</h4>
-                                <p class="tl-org">GREMO – Inteligencia de Negocios y Mercados</p>
-                                <p>Lideré estudios de mercado y opinión pública con equipos multidisciplinarios, aplicando metodología estadística rigurosa a investigaciones cuantitativas y cualitativas.</p>
-                                <div class="tl-tags"><span>Estadística</span><span>Liderazgo</span><span>Investigación</span></div>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
+        <div class="metric-card">
+          <span class="metric-value">PRONABEC</span>
+          <span class="metric-label">Becario</span>
         </div>
-    </section>
-
-    <!-- ===== PROYECTOS ===== -->
-    <section id="proyectos" class="projects">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="sec-label">Proyectos</span>
-                <h2>Casos de Estudio</h2>
-                <p class="sec-desc">Arquitecturas predictivas y soluciones de alto impacto</p>
-            </div>
-            <div class="projects-grid">
-
-                <article class="proj-card reveal">
-                    <div class="proj-img">
-                        <img src="img/project-dl.svg" alt="Hub Interactivo Deep Learning">
-                        <span class="proj-status completed">Concluído</span>
-                    </div>
-                    <div class="proj-body">
-                        <div class="proj-tags"><span>TensorFlow</span><span>FastAPI</span><span>Fashion-MNIST</span></div>
-                        <h3>Hub Interactivo Deep Learning</h3>
-                        <p>API en FastAPI que sirve modelos profundos (MLP, CNN, RNN) sobre Fashion-MNIST. Lienzo web de inferencia en tiempo real con visualización de matrices de confusión y heatmaps de activación.</p>
-                        <div class="proj-links">
-                            <a href="https://proyecto-redes-neuronales.onrender.com/" target="_blank" rel="noopener" class="proj-btn primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                Live Demo
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="proj-card reveal">
-                    <div class="proj-img">
-                        <img src="img/project-poverty.svg" alt="Índice de Pobreza Educativa">
-                        <span class="proj-status completed">Concluído</span>
-                    </div>
-                    <div class="proj-body">
-                        <div class="proj-tags"><span>R</span><span>ACM</span><span>Geoespacial</span></div>
-                        <h3>Índice de Pobreza Educativa · Perú</h3>
-                        <p>Análisis de Correspondencias Múltiples sobre millones de registros de hogares peruanos. Dashboard con mapas de brechas territoriales para orientar políticas públicas basadas en evidencia.</p>
-                        <div class="proj-links">
-                            <a href="https://rpubs.com/diegoaaraujo24003/1397209" target="_blank" rel="noopener" class="proj-btn primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                Ver Reporte
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="proj-card reveal">
-                    <div class="proj-img">
-                        <img src="img/project-kmeans.svg" alt="Motor K-Means">
-                        <span class="proj-status completed">Concluído</span>
-                    </div>
-                    <div class="proj-body">
-                        <div class="proj-tags"><span>Python</span><span>K-Means</span><span>ENAPREF</span></div>
-                        <h3>Motor Algorítmico K-Means</h3>
-                        <p>Feature Engineering sobre la matriz ENAPREF combinado con K-Means no supervisado para segmentar mercados de Lima Norte. Perfiles de consumo diferenciados para inteligencia comercial.</p>
-                        <div class="proj-links">
-                            <a href="https://github.com/diegoarz02/K-means/blob/main/GLN_KMN.pdf" target="_blank" rel="noopener" class="proj-btn primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                Documentación
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="proj-card reveal">
-                    <div class="proj-img">
-                        <img src="img/project-cardio.svg" alt="Forecasting Riesgo Coronario">
-                        <span class="proj-status completed">Concluído</span>
-                    </div>
-                    <div class="proj-body">
-                        <div class="proj-tags"><span>SMOTE</span><span>Gradient Boosting</span><span>HealthTech</span></div>
-                        <h3>Forecasting de Riesgo Coronario</h3>
-                        <p>Pipeline completo de ML (SMOTE + Gradient Boosting) sobre historiales clínicos para modelos de alerta temprana cardíaca. Infraestructura lista para integración en startups de HealthTech.</p>
-                        <div class="proj-links">
-                            <a href="https://github.com/diegoarz02/Modelo-de-Prediccion-de-riesgo-de-infarto/blob/main/ARAUJO_DIEGO_PROYECTO_FINAL_DS.ipynb" target="_blank" rel="noopener" class="proj-btn primary">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                                Ver Notebook
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-            </div>
+        <div class="metric-card">
+          <span class="metric-value">Tokyo</span>
+          <span class="metric-label">Matsuo Lab</span>
         </div>
-    </section>
+      </div>
 
-    <!-- ===== CERTIFICADOS ===== -->
-    <section id="certificados" class="certs">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="sec-label">Credenciales</span>
-                <h2>Certificaciones y Programas</h2>
-                <p class="sec-desc">Formación continua y especialización técnica verificable</p>
+      <section class="about-text">
+        <p>Estadístico en formación (9no semestre) en la <strong>Universidad Nacional Mayor de San Marcos (UNMSM)</strong>, posicionado en el <strong>Décimo Superior</strong> de mi promoción y becario <strong>PRONABEC</strong>. Actualmente practicante en el área de <strong>COE Advanced Analytics del BCP</strong>, donde aplico machine learning y analítica avanzada para resolver problemas reales de negocio.</p>
+        <p>Desde abril 2026, participo como becario en el programa de Data Science del <strong>Matsuo Lab · Universidad de Tokyo</strong>, una de las instituciones líderes en investigación de IA a nivel mundial. Mi perfil combina sólida base estadística con experiencia práctica en modelos predictivos, NLP e IA generativa.</p>
+      </section>
+
+      <div class="separator"></div>
+
+      <section class="service">
+        <h3 class="h3 service-title">Qué hago</h3>
+        <ul class="service-list">
+          <li class="service-item">
+            <div class="service-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
             </div>
-            <div class="certs-grid">
-
-                <a href="certificadosamsung.jpg" target="_blank" rel="noopener" class="cert-card reveal">
-                    <div class="cert-thumb cert-thumb--accent">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Big Data &amp; Artificial Intelligence</h4>
-                        <span class="cert-org">Samsung Innovation Campus</span>
-                        <span class="cert-date">May – Nov 2025</span>
-                    </div>
-                    <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-
-                <a href="Databricks_Agente AI.pdf" target="_blank" rel="noopener" class="cert-card reveal">
-                    <div class="cert-thumb cert-thumb--indigo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Databricks &amp; AI Agent Fundamentals</h4>
-                        <span class="cert-org">Databricks Academy</span>
-                        <span class="cert-date">Ene 2026</span>
-                    </div>
-                    <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-
-                <a href="Databricks Fundamentos.pdf" target="_blank" rel="noopener" class="cert-card reveal">
-                    <div class="cert-thumb cert-thumb--indigo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Databricks Fundamentals</h4>
-                        <span class="cert-org">Databricks Academy</span>
-                        <span class="cert-date">Ene 2026</span>
-                    </div>
-                    <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-
-                <a href="Certificado Data Science.pdf" target="_blank" rel="noopener" class="cert-card reveal">
-                    <div class="cert-thumb cert-thumb--violet">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Especialización Ciencias de Datos e IA Generativa</h4>
-                        <span class="cert-org">SmartData</span>
-                        <span class="cert-date">Feb 2026</span>
-                    </div>
-                    <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-
-                <a href="DIEGO ALONSO ARAUJO VILLEGAS_pbi.pdf" target="_blank" rel="noopener" class="cert-card reveal">
-                    <div class="cert-thumb cert-thumb--cyan">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Visualización de Datos en Power BI</h4>
-                        <span class="cert-org">Datux Perú</span>
-                        <span class="cert-date">Ene 2024</span>
-                    </div>
-                    <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-
-                <a href="DIEGO ALONSO ARAUJO VILLEGAS_excel.pdf" target="_blank" rel="noopener" class="cert-card reveal">
-                    <div class="cert-thumb cert-thumb--emerald">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Microsoft Excel Avanzado</h4>
-                        <span class="cert-org">Certificación Técnica</span>
-                        <span class="cert-date">2024</span>
-                    </div>
-                    <svg class="cert-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-
-                <div class="cert-card reveal no-link">
-                    <div class="cert-thumb cert-thumb--indigo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>SQL Server</h4>
-                        <span class="cert-org">CEDHINFO</span>
-                        <span class="cert-date">Feb 2024</span>
-                    </div>
-                </div>
-
-                <div class="cert-card reveal no-link">
-                    <div class="cert-thumb cert-thumb--cyan">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                    </div>
-                    <div class="cert-info">
-                        <h4>Introduction to Business Intelligence</h4>
-                        <span class="cert-org">Universidad Nacional Mayor de San Marcos</span>
-                        <span class="cert-date">Mar 2024</span>
-                    </div>
-                </div>
-
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Machine Learning & IA</h4>
+              <p class="service-item-text">Modelos predictivos, clasificación, clustering y series temporales con Python (sklearn, XGBoost, TensorFlow).</p>
             </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Analytics & Visualización</h4>
+              <p class="service-item-text">Dashboards interactivos en Power BI y Tableau, análisis exploratorio y comunicación de insights a stakeholders no técnicos.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Estadística & Investigación</h4>
+              <p class="service-item-text">Análisis estadístico avanzado, ANOVA, análisis multivariado y publicaciones de investigación académica.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/></svg>
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">IA Generativa & NLP</h4>
+              <p class="service-item-text">Pipelines con LLMs, RAG y fine-tuning. Experiencia con OpenAI API, LangChain y modelos de lenguaje en producción.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </article>
+
+    <!-- ===== RESUME ===== -->
+    <article class="resume" data-page="resume">
+      <header>
+        <h2 class="h2 article-title">Currículum</h2>
+      </header>
+
+      <section class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+          </div>
+          <h3 class="h3">Experiencia</h3>
         </div>
-    </section>
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Practicante — COE Advanced Analytics · BCP</h4>
+            <span>Ene 2025 — Actualidad · Lima, Perú</span>
+            <p class="timeline-text">Modelos de ML en producción para productos bancarios. Análisis con Python y SQL. Presentación de resultados a stakeholders y equipos de negocio.</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Becario Data Science · Matsuo Lab, Universidad de Tokyo</h4>
+            <span>Abr 2026 — Actualidad · Remoto</span>
+            <p class="timeline-text">Programa intensivo de Data Science e IA en uno de los laboratorios líderes en inteligencia artificial a nivel mundial.</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Analytics Translator · Proyectos Freelance</h4>
+            <span>2023 — Actualidad · Remoto</span>
+            <p class="timeline-text">Consultoría en analítica de datos: dashboards, modelos predictivos y reportes estadísticos para clientes del sector privado.</p>
+          </li>
+        </ol>
+      </section>
 
-    <!-- ===== INVESTIGACIÓN Y PUBLICACIONES ===== -->
-    <section id="investigacion" class="research">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="sec-label">Aportes Académicos</span>
-                <h2>Investigación y Publicaciones</h2>
-                <p class="sec-desc">Papers, reportes e investigaciones realizadas en UNMSM y GREMO</p>
-            </div>
-            <div class="research-grid">
-
-                <a href="Serie_Temporal_PBI.pdf" target="_blank" rel="noopener" class="paper-card reveal">
-                    <div class="paper-icon paper-icon--indigo">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
-                    </div>
-                    <div class="paper-body">
-                        <span class="paper-type">Econometría · Estadística</span>
-                        <h3>Análisis de Serie Temporal — PBI Peruano</h3>
-                        <p>Modelamiento econométrico de series temporales del Producto Bruto Interno de Perú. Aplicación de modelos ARIMA para pronóstico y análisis de tendencias macroeconómicas.</p>
-                        <div class="paper-meta">
-                            <span>UNMSM</span>
-                            <span class="paper-link">Ver documento <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="Analisis_Factorial.pdf" target="_blank" rel="noopener" class="paper-card reveal">
-                    <div class="paper-icon paper-icon--violet">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-                    </div>
-                    <div class="paper-body">
-                        <span class="paper-type">Estadística Multivariada</span>
-                        <h3>Análisis Factorial Exploratorio</h3>
-                        <p>Reducción dimensional mediante Análisis Factorial aplicado a variables socioeconómicas. Identificación de factores latentes y estructuras subyacentes en datos multivariados.</p>
-                        <div class="paper-meta">
-                            <span>UNMSM</span>
-                            <span class="paper-link">Ver documento <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="ARAUJOAOV.pdf" target="_blank" rel="noopener" class="paper-card reveal">
-                    <div class="paper-icon paper-icon--cyan">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
-                    </div>
-                    <div class="paper-body">
-                        <span class="paper-type">Estadística Inferencial</span>
-                        <h3>Análisis de Varianza (ANOVA)</h3>
-                        <p>Aplicación de modelos ANOVA para la comparación de grupos y tratamientos. Validación de supuestos estadísticos, pruebas de hipótesis e interpretación de resultados en contextos experimentales.</p>
-                        <div class="paper-meta">
-                            <span>UNMSM</span>
-                            <span class="paper-link">Ver documento <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="BIARAUJO (1).pdf" target="_blank" rel="noopener" class="paper-card reveal">
-                    <div class="paper-icon paper-icon--emerald">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
-                    </div>
-                    <div class="paper-body">
-                        <span class="paper-type">Visualización de Datos</span>
-                        <h3>Proyecto Power BI</h3>
-                        <p>Diseño y desarrollo de dashboards interactivos en Power BI para monitoreo de KPIs, análisis de datos y toma de decisiones estratégicas basada en visualizaciones claras y accionables.</p>
-                        <div class="paper-meta">
-                            <span>UNMSM</span>
-                            <span class="paper-link">Ver documento <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
-                        </div>
-                    </div>
-                </a>
-
-                <a href="GREMO - Tendencias en San Valentín - UNMSM Research (3).pdf" target="_blank" rel="noopener" class="paper-card reveal">
-                    <div class="paper-icon paper-icon--rose">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-                    </div>
-                    <div class="paper-body">
-                        <span class="paper-type">Investigación de Mercado · GREMO</span>
-                        <h3>Tendencias en San Valentín — UNMSM</h3>
-                        <p>Investigación cuantitativa y cualitativa sobre patrones de consumo y comportamiento en San Valentín dentro de la comunidad universitaria UNMSM, elaborada desde el grupo GREMO.</p>
-                        <div class="paper-meta">
-                            <span>GREMO · UNMSM</span>
-                            <span class="paper-link">Ver documento <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg></span>
-                        </div>
-                    </div>
-                </a>
-
-            </div>
+      <section class="timeline">
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 10v6M2 10l10-5 10 5-10 5-10-5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+          </div>
+          <h3 class="h3">Educación</h3>
         </div>
-    </section>
+        <ol class="timeline-list">
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Estadística — UNMSM</h4>
+            <span>2021 — Actualidad · Lima, Perú</span>
+            <p class="timeline-text">9no semestre. Décimo Superior. Becario PRONABEC. Especialización en estadística computacional, modelos predictivos y análisis multivariado.</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Programa Big Data · Samsung Innovation Campus</h4>
+            <span>2024 · Lima, Perú</span>
+            <p class="timeline-text">Formación intensiva en Big Data, procesamiento distribuido y analítica a gran escala.</p>
+          </li>
+          <li class="timeline-item">
+            <h4 class="h4 timeline-item-title">Data Science · Matsuo Lab · Universidad de Tokyo</h4>
+            <span>Abr 2026 — Actualidad · Remoto</span>
+            <p class="timeline-text">Programa selectivo de IA y Data Science con enfoque en investigación aplicada y modelos de última generación.</p>
+          </li>
+        </ol>
+      </section>
 
-    <!-- ===== CONTACTO ===== -->
-    <section id="contacto" class="contact">
-        <div class="container">
-            <div class="section-header reveal">
-                <span class="sec-label">Contacto</span>
-                <h2>¿Trabajamos Juntos?</h2>
-                <p class="sec-desc">Abierto a proyectos desafiantes, colaboraciones y oportunidades</p>
-            </div>
-            <div class="contact-layout reveal">
-                <div class="contact-info">
-                    <p class="contact-intro">Si tienes un proyecto de datos, una idea con IA o simplemente quieres conectar, estoy a un mensaje de distancia.</p>
-                    <div class="contact-items">
-                        <a href="mailto:diegoalonso.araujo24@gmail.com" class="ci-item">
-                            <div class="ci-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><polyline points="22,4 12,13 2,4"/></svg>
-                            </div>
-                            <div>
-                                <span class="ci-label">Email</span>
-                                <span class="ci-val">diegoalonso.araujo24@gmail.com</span>
-                            </div>
-                        </a>
-                        <a href="tel:+51955101937" class="ci-item">
-                            <div class="ci-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.62 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.27-.96a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                            </div>
-                            <div>
-                                <span class="ci-label">WhatsApp</span>
-                                <span class="ci-val">+51 955 101 937</span>
-                            </div>
-                        </a>
-                        <a href="https://www.linkedin.com/in/diegoaraujo-data/" target="_blank" rel="noopener" class="ci-item">
-                            <div class="ci-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                            </div>
-                            <div>
-                                <span class="ci-label">LinkedIn</span>
-                                <span class="ci-val">diegoaraujo-data</span>
-                            </div>
-                        </a>
-                        <a href="https://github.com/diegoarz02" target="_blank" rel="noopener" class="ci-item">
-                            <div class="ci-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                            </div>
-                            <div>
-                                <span class="ci-label">GitHub</span>
-                                <span class="ci-val">@diegoarz02</span>
-                            </div>
-                        </a>
-                    </div>
-                </div>
+      <section class="skill">
+        <h3 class="h3 skills-title">Habilidades Técnicas</h3>
 
-                <!-- Formspree form — reemplaza XXXXXXXX con tu ID de formspree.io -->
-                <form class="contact-form" action="https://formspree.io/f/mjgpnybj" method="POST" id="contact-form">
-                    <div class="form-group">
-                        <label for="nombre">Nombre</label>
-                        <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Email</label>
-                        <input type="email" id="email" name="email" placeholder="tu@email.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="asunto">Asunto</label>
-                        <input type="text" id="asunto" name="asunto" placeholder="¿En qué puedo ayudarte?">
-                    </div>
-                    <div class="form-group">
-                        <label for="mensaje">Mensaje</label>
-                        <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntame sobre tu proyecto o idea..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn-submit" id="submit-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                        Enviar mensaje
-                    </button>
-                    <p class="form-note" id="form-note"></p>
-                </form>
-
-            </div>
+        <div class="skills-section">
+          <h4 class="skills-group-title">Lenguajes & Datos</h4>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Python</h5><data value="95">95%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="95"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">SQL</h5><data value="90">90%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="90"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">R</h5><data value="88">88%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="88"></div></div>
+            </li>
+          </ul>
         </div>
-    </section>
 
-    <!-- ===== FOOTER ===== -->
-    <footer class="footer">
-        <div class="footer-container">
-            <span class="footer-logo">&lt;DA/&gt;</span>
-            <p>Soluciones algorítmicas diseñadas con propósito · Diego Araujo &copy; <span id="year"></span></p>
-            <div class="footer-socials">
-                <a href="https://www.linkedin.com/in/diegoaraujo-data/" target="_blank" rel="noopener" aria-label="LinkedIn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-                <a href="https://github.com/diegoarz02" target="_blank" rel="noopener" aria-label="GitHub">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
-                </a>
-            </div>
+        <div class="skills-section">
+          <h4 class="skills-group-title">Machine Learning & IA</h4>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Scikit-learn / XGBoost</h5><data value="92">92%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="92"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">TensorFlow / PyTorch</h5><data value="85">85%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="85"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">LLMs / LangChain / RAG</h5><data value="87">87%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="87"></div></div>
+            </li>
+          </ul>
         </div>
-    </footer>
 
-    <button class="back-top" id="back-top" aria-label="Volver arriba">
-        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
-    </button>
+        <div class="skills-section">
+          <h4 class="skills-group-title">Visualización & BI</h4>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Power BI</h5><data value="90">90%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="90"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Tableau</h5><data value="85">85%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="85"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Matplotlib / Seaborn / Plotly</h5><data value="92">92%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="92"></div></div>
+            </li>
+          </ul>
+        </div>
 
-    <script src="script.js"></script>
+        <div class="skills-section">
+          <h4 class="skills-group-title">Estadística</h4>
+          <ul class="skills-list">
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Estadística Inferencial</h5><data value="95">95%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="95"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Series Temporales</h5><data value="88">88%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="88"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">Análisis Multivariado</h5><data value="90">90%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="90"></div></div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="github-repos">
+        <div class="title-wrapper">
+          <div class="icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0 0 24 12c0-6.63-5.37-12-12-12z"/></svg>
+          </div>
+          <h3 class="h3">Repositorios GitHub</h3>
+        </div>
+        <div id="github-grid" class="repo-grid">
+          <p class="loading-repos">Cargando repositorios...</p>
+        </div>
+      </section>
+    </article>
+
+    <!-- ===== PORTFOLIO ===== -->
+    <article class="portfolio" data-page="portfolio">
+      <header>
+        <h2 class="h2 article-title">Portafolio</h2>
+      </header>
+
+      <ul class="project-list">
+        <li class="project-item">
+          <a href="https://github.com/diegoarz02/deep-learning-clasificacion" target="_blank" rel="noopener">
+            <figure class="project-img">
+              <img src="img/project-dl.svg" alt="Deep Learning Clasificación" loading="lazy">
+            </figure>
+            <div class="project-content">
+              <p class="project-category">Deep Learning · Computer Vision</p>
+              <h3 class="project-title">Clasificación de Imágenes con Deep Learning</h3>
+              <p class="project-desc">Red neuronal convolucional (CNN) para clasificación de imágenes médicas. Transfer learning con ResNet50. Accuracy del 94% en validación.</p>
+              <div class="project-tags">
+                <span>Python</span><span>TensorFlow</span><span>CNN</span><span>Transfer Learning</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="https://github.com/diegoarz02/poverty-prediction" target="_blank" rel="noopener">
+            <figure class="project-img">
+              <img src="img/project-poverty.svg" alt="Predicción de Pobreza" loading="lazy">
+            </figure>
+            <div class="project-content">
+              <p class="project-category">Machine Learning · Políticas Públicas</p>
+              <h3 class="project-title">Predicción de Pobreza con ML</h3>
+              <p class="project-desc">Modelo de clasificación para identificar hogares en situación de pobreza usando datos ENAHO. Feature engineering avanzado y validación cruzada.</p>
+              <div class="project-tags">
+                <span>Python</span><span>XGBoost</span><span>ENAHO</span><span>Feature Engineering</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="https://github.com/diegoarz02/kmeans-enapref" target="_blank" rel="noopener">
+            <figure class="project-img">
+              <img src="img/project-kmeans.svg" alt="Motor K-Means ENAPREF" loading="lazy">
+            </figure>
+            <div class="project-content">
+              <p class="project-category">Clustering · Ciencias Sociales</p>
+              <h3 class="project-title">Motor Algorítmico K-Means · ENAPREF</h3>
+              <p class="project-desc">Segmentación de hogares peruanos usando K-Means sobre microdatos ENAPREF. Selección de K óptimo y análisis de perfiles por clúster.</p>
+              <div class="project-tags">
+                <span>Python</span><span>K-Means</span><span>ENAPREF</span><span>Feature Engineering</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="https://github.com/diegoarz02/cardio-risk-forecasting" target="_blank" rel="noopener">
+            <figure class="project-img">
+              <img src="img/project-cardio.svg" alt="Forecasting Riesgo Coronario" loading="lazy">
+            </figure>
+            <div class="project-content">
+              <p class="project-category">ML · HealthTech</p>
+              <h3 class="project-title">Forecasting de Riesgo Coronario</h3>
+              <p class="project-desc">Predicción de enfermedades cardiovasculares con Gradient Boosting. Balanceo SMOTE, 91% de precisión. Análisis de variables clínicas determinantes.</p>
+              <div class="project-tags">
+                <span>Python</span><span>SMOTE</span><span>Gradient Boosting</span><span>HealthTech</span>
+              </div>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </article>
+
+    <!-- ===== CERTIFICATES ===== -->
+    <article class="certificates" data-page="certificates">
+      <header>
+        <h2 class="h2 article-title">Certificados</h2>
+      </header>
+
+      <ul class="cert-list">
+        <li class="cert-item">
+          <div class="cert-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-content">
+            <h4 class="h4">Machine Learning Specialization</h4>
+            <p>Stanford University / DeepLearning.AI · Coursera</p>
+            <time>2024</time>
+          </div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-content">
+            <h4 class="h4">Deep Learning Specialization</h4>
+            <p>DeepLearning.AI · Coursera</p>
+            <time>2024</time>
+          </div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-content">
+            <h4 class="h4">Data Science Professional Certificate</h4>
+            <p>IBM · Coursera</p>
+            <time>2023</time>
+          </div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-content">
+            <h4 class="h4">Big Data · Samsung Innovation Campus</h4>
+            <p>Samsung · Lima, Perú</p>
+            <time>2024</time>
+          </div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-content">
+            <h4 class="h4">Power BI Data Analyst</h4>
+            <p>Microsoft · Coursera</p>
+            <time>2023</time>
+          </div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-content">
+            <h4 class="h4">SQL for Data Science</h4>
+            <p>UC Davis · Coursera</p>
+            <time>2023</time>
+          </div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-content">
+            <h4 class="h4">Databricks Fundamentals</h4>
+            <p>Databricks Academy</p>
+            <time>2024</time>
+          </div>
+        </li>
+        <li class="cert-item">
+          <div class="cert-icon-box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+          </div>
+          <div class="cert-content">
+            <h4 class="h4">Databricks Agente AI</h4>
+            <p>Databricks Academy</p>
+            <time>2025</time>
+          </div>
+        </li>
+      </ul>
+    </article>
+
+    <!-- ===== RESEARCH ===== -->
+    <article class="research" data-page="research">
+      <header>
+        <h2 class="h2 article-title">Investigación</h2>
+      </header>
+
+      <ul class="paper-list">
+        <li class="paper-item">
+          <div class="paper-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="paper-content">
+            <h4 class="h4">Serie Temporal del PBI Regional</h4>
+            <p class="paper-desc">Análisis de series temporales sobre el Producto Bruto Interno regional del Perú. Modelos ARIMA, descomposición estacional y proyecciones.</p>
+            <div class="paper-tags"><span>Series Temporales</span><span>ARIMA</span><span>PBI</span><span>R</span></div>
+            <a href="PBIARAUJO.pdf" target="_blank" class="paper-link">Ver documento →</a>
+          </div>
+        </li>
+        <li class="paper-item">
+          <div class="paper-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="paper-content">
+            <h4 class="h4">Análisis Factorial de Componentes</h4>
+            <p class="paper-desc">Aplicación de análisis factorial exploratorio y confirmatorio para reducción de dimensionalidad en datos socioeconómicos peruanos.</p>
+            <div class="paper-tags"><span>Análisis Factorial</span><span>PCA</span><span>R</span><span>Multivariado</span></div>
+            <a href="FACARAUJO.pdf" target="_blank" class="paper-link">Ver documento →</a>
+          </div>
+        </li>
+        <li class="paper-item">
+          <div class="paper-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="paper-content">
+            <h4 class="h4">ANOVA — Análisis de Varianza</h4>
+            <p class="paper-desc">Diseño y análisis de experimentos mediante ANOVA de uno y dos factores. Pruebas post-hoc y verificación de supuestos estadísticos.</p>
+            <div class="paper-tags"><span>ANOVA</span><span>DOE</span><span>Estadística</span><span>R</span></div>
+            <a href="ARAUJOAOV.pdf" target="_blank" class="paper-link">Ver documento →</a>
+          </div>
+        </li>
+        <li class="paper-item">
+          <div class="paper-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="paper-content">
+            <h4 class="h4">Proyecto Power BI — Dashboard Analítico</h4>
+            <p class="paper-desc">Diseño e implementación de dashboard interactivo en Power BI para análisis de datos empresariales. KPIs, DAX avanzado y storytelling con datos.</p>
+            <div class="paper-tags"><span>Power BI</span><span>DAX</span><span>Dashboard</span><span>Business Intelligence</span></div>
+            <a href="BIARAUJO.pdf" target="_blank" class="paper-link">Ver documento →</a>
+          </div>
+        </li>
+        <li class="paper-item">
+          <div class="paper-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+          </div>
+          <div class="paper-content">
+            <h4 class="h4">GREMO San Valentín — Análisis de Redes</h4>
+            <p class="paper-desc">Análisis de redes sociales aplicado a datos de conexiones interpersonales. Métricas de centralidad, detección de comunidades y visualización de grafos.</p>
+            <div class="paper-tags"><span>Redes Sociales</span><span>Grafos</span><span>Network Analysis</span><span>Python</span></div>
+            <a href="GREMOARAUJO.pdf" target="_blank" class="paper-link">Ver documento →</a>
+          </div>
+        </li>
+      </ul>
+    </article>
+
+    <!-- ===== CONTACT ===== -->
+    <article class="contact" data-page="contact">
+      <header>
+        <h2 class="h2 article-title">Contacto</h2>
+      </header>
+
+      <section class="mapbox">
+        <figure>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.9714849974!2d-77.02820!3d-12.04640!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c8b5d35662cf%3A0x85b8d2fe95a7a6f3!2sLima%2C+Peru!5e0!3m2!1ses!2spe!4v1617000000000"
+            width="400" height="250" style="border:0;" loading="lazy" allowfullscreen title="Lima, Perú">
+          </iframe>
+        </figure>
+      </section>
+
+      <section class="contact-form">
+        <h3 class="h3 form-title">Formulario de Contacto</h3>
+        <form id="contact-form" action="https://formspree.io/f/mjgpnybj" method="POST" class="form">
+          <div class="input-wrapper">
+            <input type="text" name="name" class="form-input" placeholder="Nombre completo" required>
+            <input type="email" name="email" class="form-input" placeholder="Correo electrónico" required>
+          </div>
+          <input type="text" name="subject" class="form-input" placeholder="Asunto">
+          <textarea name="message" class="form-input" placeholder="Tu mensaje..." rows="6" required></textarea>
+          <button id="submit-btn" type="submit" class="form-btn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            <span>Enviar mensaje</span>
+          </button>
+          <p id="form-note" class="form-note"></p>
+        </form>
+      </section>
+    </article>
+
+  </div><!-- .main-content -->
+
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>

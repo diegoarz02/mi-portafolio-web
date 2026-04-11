@@ -1,105 +1,122 @@
 /* ==========================================
    CONFIG
    ========================================== */
-const GITHUB_USER   = 'diegoarz02';
-const TYPEWRITER    = ['Data Scientist', 'ML Engineer', 'AI Developer', 'Estadístico', 'Analytics Translator'];
+const GITHUB_USER = 'diegoarz02';
+const TYPEWRITER  = ['Data Scientist', 'ML Engineer', 'AI Developer', 'Estadístico', 'Analytics Translator'];
 
 /* ==========================================
-   SCROLL: PROGRESS + NAVBAR + BACK-TO-TOP
+   SIDEBAR TOGGLE
    ========================================== */
-const $progress = document.getElementById('scroll-progress');
-const $navbar   = document.getElementById('navbar');
-const $backTop  = document.getElementById('back-top');
+const $sidebar    = document.querySelector('[data-sidebar]');
+const $sidebarBtn = document.querySelector('[data-sidebar-btn]');
 
-window.addEventListener('scroll', () => {
-    const s = window.scrollY;
-    const h = document.documentElement.scrollHeight - window.innerHeight;
-    if ($progress) $progress.style.width = (s / h * 100) + '%';
-    if ($navbar)   $navbar.classList.toggle('scrolled', s > 60);
-    if ($backTop)  $backTop.classList.toggle('visible', s > 400);
-    highlightNav();
-}, { passive: true });
-
-if ($backTop) $backTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-
-/* ==========================================
-   ACTIVE NAV
-   ========================================== */
-function highlightNav() {
-    const pos = window.scrollY + 100;
-    document.querySelectorAll('section[id]').forEach(sec => {
-        const link = document.querySelector(`.nav-link[href="#${sec.id}"]`);
-        if (link) {
-            const active = pos >= sec.offsetTop && pos < sec.offsetTop + sec.offsetHeight;
-            link.classList.toggle('active', active);
-        }
-    });
+if ($sidebar && $sidebarBtn) {
+  $sidebarBtn.addEventListener('click', () => {
+    const isOpen = $sidebar.classList.toggle('active');
+    $sidebarBtn.querySelector('span').textContent = isOpen ? 'Ocultar contactos' : 'Mostrar contactos';
+  });
 }
 
 /* ==========================================
-   MOBILE MENU
+   TAB SWITCHING
    ========================================== */
-const $ham   = document.getElementById('hamburger');
-const $links = document.getElementById('nav-links');
+const $navLinks = document.querySelectorAll('[data-nav-link]');
+const $articles = document.querySelectorAll('[data-page]');
 
-if ($ham && $links) {
-    $ham.addEventListener('click', () => {
-        $ham.classList.toggle('open');
-        $links.classList.toggle('open');
-    });
-    $links.querySelectorAll('.nav-link').forEach(l => {
-        l.addEventListener('click', () => {
-            $ham.classList.remove('open');
-            $links.classList.remove('open');
-        });
-    });
-}
+$navLinks.forEach(btn => {
+  btn.addEventListener('click', () => {
+    const target = btn.dataset.target;
 
-/* ==========================================
-   SCROLL REVEAL
-   ========================================== */
-const revealObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        revealObs.unobserve(entry.target);
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+    $navLinks.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
 
-document.querySelectorAll('.reveal').forEach(el => revealObs.observe(el));
+    $articles.forEach(art => {
+      const isTarget = art.dataset.page === target;
+      art.classList.toggle('active', isTarget);
+      if (isTarget && target === 'resume') triggerSkillBars(art);
+    });
+
+    // scroll to top of content on mobile
+    if (window.innerWidth <= 700) {
+      document.querySelector('.navbar').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+});
 
 /* ==========================================
    TYPEWRITER
    ========================================== */
 (function initTypewriter() {
-    const el = document.getElementById('typewriter');
-    if (!el) return;
-    let wi = 0, ci = 0, del = false;
-    function tick() {
-        const word = TYPEWRITER[wi];
-        el.textContent = del ? word.slice(0, --ci) : word.slice(0, ++ci);
-        if (!del && ci === word.length) { setTimeout(() => { del = true; tick(); }, 1900); return; }
-        if (del && ci === 0) { del = false; wi = (wi + 1) % TYPEWRITER.length; }
-        setTimeout(tick, del ? 40 : 90);
-    }
-    setTimeout(tick, 800);
+  const el = document.getElementById('typewriter');
+  if (!el) return;
+  let wi = 0, ci = 0, del = false;
+  function tick() {
+    const word = TYPEWRITER[wi];
+    el.textContent = del ? word.slice(0, --ci) : word.slice(0, ++ci);
+    if (!del && ci === word.length) { setTimeout(() => { del = true; tick(); }, 1900); return; }
+    if (del && ci === 0) { del = false; wi = (wi + 1) % TYPEWRITER.length; }
+    setTimeout(tick, del ? 40 : 90);
+  }
+  setTimeout(tick, 800);
 })();
 
 /* ==========================================
-   SKILL BARS — animate on viewport entry
+   SKILL BARS
    ========================================== */
-const skillObs = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.querySelectorAll('.sb-fill').forEach(bar => {
-            const pct = bar.dataset.pct;
-            requestAnimationFrame(() => { bar.style.width = pct + '%'; });
-        });
-        skillObs.unobserve(entry.target);
-    });
-}, { threshold: 0.35 });
+function triggerSkillBars(container) {
+  container.querySelectorAll('.skill-progress-fill').forEach(bar => {
+    requestAnimationFrame(() => { bar.style.width = bar.dataset.pct + '%'; });
+  });
+}
 
-document.querySelectorAll('.skill-group').forEach(g => skillObs.observe(g));
+// Trigger if resume tab visible on load
+const resumeArticle = document.querySelector('[data-page="resume"]');
+if (resumeArticle) {
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) { triggerSkillBars(e.target); obs.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  obs.observe(resumeArticle);
+}
+
+/* ==========================================
+   GITHUB REPOS
+   ========================================== */
+async function loadGitHubRepos() {
+  const $grid = document.getElementById('github-grid');
+  if (!$grid) return;
+
+  try {
+    const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=12`);
+    if (!res.ok) throw new Error();
+    const repos = await res.json();
+    const filtered = repos.filter(r => !r.fork).slice(0, 8);
+
+    if (!filtered.length) {
+      $grid.innerHTML = '<p class="loading-repos">No se encontraron repositorios.</p>';
+      return;
+    }
+
+    $grid.innerHTML = filtered.map(r => `
+      <div class="repo-card">
+        <a href="${r.html_url}" target="_blank" rel="noopener" class="repo-name">${r.name}</a>
+        <p class="repo-desc">${r.description || 'Sin descripción'}</p>
+        <div class="repo-meta">
+          ${r.language ? `<span class="repo-lang">${r.language}</span>` : ''}
+          <span class="repo-stars">
+            <svg width="11" height="11" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+            ${r.stargazers_count}
+          </span>
+        </div>
+      </div>
+    `).join('');
+  } catch {
+    $grid.innerHTML = `<p class="loading-repos">Visita <a href="https://github.com/${GITHUB_USER}" target="_blank" style="color:var(--gold)">github.com/${GITHUB_USER}</a> para ver todos los repositorios.</p>`;
+  }
+}
+
+loadGitHubRepos();
 
 /* ==========================================
    CONTACT FORM (Formspree)
@@ -109,40 +126,32 @@ const $note    = document.getElementById('form-note');
 const $submitB = document.getElementById('submit-btn');
 
 if ($form) {
-    $form.addEventListener('submit', async e => {
-        e.preventDefault();
-        $submitB.disabled = true;
-        $submitB.textContent = 'Enviando...';
-        $note.textContent = '';
-        $note.className = 'form-note';
+  $form.addEventListener('submit', async e => {
+    e.preventDefault();
+    $submitB.disabled = true;
+    $submitB.querySelector('span').textContent = 'Enviando...';
+    $note.textContent = '';
+    $note.className = 'form-note';
 
-        try {
-            const res = await fetch($form.action, {
-                method: 'POST',
-                body: new FormData($form),
-                headers: { 'Accept': 'application/json' }
-            });
-            if (res.ok) {
-                $note.textContent = 'Mensaje enviado correctamente. Te responderé pronto.';
-                $note.className = 'form-note success';
-                $form.reset();
-            } else {
-                throw new Error();
-            }
-        } catch {
-            $note.textContent = 'Hubo un error al enviar. Escríbeme directamente a diegoalonso.araujo24@gmail.com';
-            $note.className = 'form-note error';
-        } finally {
-            $submitB.disabled = false;
-            $submitB.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg> Enviar mensaje`;
-        }
-    });
+    try {
+      const res = await fetch($form.action, {
+        method: 'POST',
+        body: new FormData($form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (res.ok) {
+        $note.textContent = 'Mensaje enviado correctamente. Te responderé pronto.';
+        $note.className = 'form-note success';
+        $form.reset();
+      } else {
+        throw new Error();
+      }
+    } catch {
+      $note.textContent = 'Hubo un error al enviar. Escríbeme a diegoalonso.araujo24@gmail.com';
+      $note.className = 'form-note error';
+    } finally {
+      $submitB.disabled = false;
+      $submitB.querySelector('span').textContent = 'Enviar mensaje';
+    }
+  });
 }
-
-/* ==========================================
-   FOOTER YEAR
-   ========================================== */
-document.addEventListener('DOMContentLoaded', () => {
-    const $y = document.getElementById('year');
-    if ($y) $y.textContent = new Date().getFullYear();
-});
