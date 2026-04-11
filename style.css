@@ -12,13 +12,20 @@
   --light-gray:     hsl(0, 0%, 84%);
   --light-gray-70:  hsla(0, 0%, 84%, 0.7);
 
-  /* Accent — Gold */
+  /* Signature accent — Electric Indigo + Violet (Diego's brand) */
+  --accent:         hsl(230, 85%, 65%);
+  --accent-2:       hsl(262, 78%, 68%);
+  --accent-light:   hsl(230, 85%, 80%);
+  --accent-dim:     hsla(230, 85%, 65%, 0.15);
+  --accent-gradient: linear-gradient(135deg, hsl(230, 85%, 65%), hsl(262, 78%, 68%));
+
+  /* Keep for secondary details */
   --gold:           hsl(45, 100%, 72%);
   --vegas-gold:     hsl(45, 54%, 58%);
 
-  /* Accent — Indigo (brand) */
-  --indigo:         hsl(234, 84%, 65%);
-  --indigo-light:   hsl(234, 84%, 80%);
+  /* Legacy aliases */
+  --indigo:         var(--accent);
+  --indigo-light:   var(--accent-light);
 
   /* Shadows */
   --shadow-1:  -4px 8px 24px hsla(0, 0%, 0%, 0.25);
@@ -118,11 +125,12 @@ main {
 }
 
 .title-pill {
-  background: var(--onyx);
+  background: var(--accent-dim);
+  border: 1px solid hsla(230, 85%, 65%, 0.3);
   border-radius: 8px;
   padding: 4px 14px;
   font-size: var(--fs-8);
-  color: var(--gold);
+  color: var(--accent-light);
   font-weight: 500;
   display: inline-block;
   min-width: 160px;
@@ -134,10 +142,11 @@ main {
   display: flex;
   align-items: center;
   gap: 8px;
-  color: var(--gold);
+  color: var(--accent-light);
   font-size: var(--fs-7);
   font-weight: 500;
-  background: var(--onyx);
+  background: var(--accent-dim);
+  border: 1px solid hsla(230, 85%, 65%, 0.25);
   border-radius: 8px;
   padding: 8px 16px;
   transition: var(--tr);
@@ -174,10 +183,10 @@ main {
 .contact-item { display: flex; align-items: flex-start; gap: 12px; }
 
 .icon-box {
-  background: var(--onyx);
+  background: var(--accent-dim);
   border-radius: 8px;
   padding: 9px;
-  color: var(--gold);
+  color: var(--accent-light);
   flex-shrink: 0;
   display: flex;
 }
@@ -198,7 +207,7 @@ main {
   word-break: break-all;
 }
 
-.contact-link:hover { color: var(--gold); }
+.contact-link:hover { color: var(--accent-light); }
 
 .social-list { display: flex; justify-content: center; gap: 14px; }
 
@@ -212,7 +221,7 @@ main {
   align-items: center;
 }
 
-.social-link:hover { color: var(--gold); background: var(--jet); }
+.social-link:hover { color: var(--accent-light); background: var(--accent-dim); }
 
 .btn-cv {
   display: flex;
@@ -274,8 +283,9 @@ main {
 .navbar-link:hover { background: var(--onyx); }
 
 .navbar-link.active {
-  background: var(--onyx);
-  color: var(--gold);
+  background: var(--accent-dim);
+  color: var(--accent-light);
+  border: 1px solid hsla(230, 85%, 65%, 0.3);
 }
 
 /* ==========================================
@@ -305,7 +315,8 @@ article.active {
   font-weight: 700;
   color: var(--white-2);
   padding-bottom: 12px;
-  border-bottom: 3px solid var(--gold);
+  border-bottom: 3px solid transparent;
+  border-image: var(--accent-gradient) 1;
   margin-bottom: 28px;
 }
 
@@ -336,7 +347,10 @@ article.active {
   display: block;
   font-size: var(--fs-6);
   font-weight: 700;
-  color: var(--gold);
+  background: var(--accent-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
   margin-bottom: 4px;
 }
 
@@ -345,9 +359,33 @@ article.active {
   color: var(--light-gray-70);
 }
 
-.about-text { margin-bottom: 22px; }
+.about-text { margin-bottom: 18px; }
 .about-text p { margin-bottom: 14px; color: var(--light-gray); line-height: 1.75; }
 .about-text strong { color: var(--white-2); }
+
+/* Interests tags */
+.interests-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 22px;
+}
+
+.interest-tag {
+  font-size: var(--fs-8);
+  font-weight: 500;
+  color: var(--accent-light);
+  background: var(--accent-dim);
+  border: 1px solid hsla(230, 85%, 65%, 0.25);
+  border-radius: 20px;
+  padding: 4px 12px;
+  transition: var(--tr);
+}
+
+.interest-tag:hover {
+  background: hsla(230, 85%, 65%, 0.25);
+  border-color: var(--accent);
+}
 
 .service-title { color: var(--white-2); margin-bottom: 18px; }
 
@@ -368,9 +406,9 @@ article.active {
   transition: var(--tr);
 }
 
-.service-item:hover { border-color: var(--gold); }
+.service-item:hover { border-color: var(--accent); box-shadow: 0 0 20px var(--accent-dim); }
 
-.service-icon-box { color: var(--gold); }
+.service-icon-box { color: var(--accent-light); }
 .service-item-title { color: var(--white-2); font-size: var(--fs-5); font-weight: 600; }
 .service-item-text { color: var(--light-gray); font-size: var(--fs-7); line-height: 1.6; }
 
@@ -386,7 +424,7 @@ article.active {
   margin-bottom: 22px;
 }
 
-.title-wrapper .icon-box { background: var(--onyx); color: var(--gold); }
+.title-wrapper .icon-box { background: var(--accent-dim); color: var(--accent-light); }
 .title-wrapper .h3 { color: var(--white-2); }
 
 .timeline-list {
@@ -407,13 +445,25 @@ article.active {
   width: 12px;
   height: 12px;
   border-radius: 50%;
-  background: var(--gold);
+  background: var(--accent-gradient);
   border: 2px solid var(--eerie-black-2);
 }
 
-.timeline-item-title { color: var(--white-2); font-size: var(--fs-5); margin-bottom: 4px; }
-.timeline-item span  { font-size: var(--fs-8); color: var(--vegas-gold); font-weight: 500; display: block; margin-bottom: 6px; }
-.timeline-text       { color: var(--light-gray); font-size: var(--fs-7); line-height: 1.6; }
+.timeline-item-title { color: var(--white-2); font-size: var(--fs-5); margin-bottom: 4px; font-weight: 600; }
+.timeline-item span  { font-size: var(--fs-8); color: var(--accent-light); font-weight: 500; display: block; margin-bottom: 6px; opacity: 0.85; }
+.timeline-text       { color: var(--light-gray); font-size: var(--fs-7); line-height: 1.6; margin-bottom: 10px; }
+.timeline-text strong { color: var(--white-2); }
+
+.tl-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 2px; }
+.tl-tags span {
+  font-size: 11px;
+  font-weight: 500;
+  color: var(--accent-light);
+  background: var(--accent-dim);
+  border: 1px solid hsla(230, 85%, 65%, 0.2);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
 
 /* ==========================================
    RESUME — Skills
@@ -425,10 +475,11 @@ article.active {
 .skills-group-title {
   font-size: var(--fs-8);
   font-weight: 600;
-  color: var(--vegas-gold);
+  color: var(--accent-light);
   text-transform: uppercase;
   letter-spacing: 1px;
   margin-bottom: 12px;
+  opacity: 0.85;
 }
 
 .skills-list { display: flex; flex-direction: column; gap: 12px; }
@@ -520,9 +571,9 @@ article.active {
 }
 
 .project-item:hover {
-  border-color: var(--gold);
+  border-color: var(--accent);
   transform: translateY(-4px);
-  box-shadow: var(--shadow-2);
+  box-shadow: 0 16px 30px hsla(230, 85%, 65%, 0.15);
 }
 
 .project-img { overflow: hidden; aspect-ratio: 2 / 1; }
@@ -539,7 +590,7 @@ article.active {
 
 .project-category {
   font-size: var(--fs-8);
-  color: var(--gold);
+  color: var(--accent-light);
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.5px;
@@ -580,13 +631,13 @@ article.active {
   transition: var(--tr);
 }
 
-.cert-item:hover { border-color: var(--gold); }
+.cert-item:hover { border-color: var(--accent); box-shadow: 0 4px 16px var(--accent-dim); }
 
 .cert-icon-box {
-  background: var(--eerie-black-2);
+  background: var(--accent-dim);
   border-radius: 10px;
   padding: 10px;
-  color: var(--gold);
+  color: var(--accent-light);
   flex-shrink: 0;
   display: flex;
 }
@@ -595,7 +646,7 @@ article.active {
 
 .cert-content .h4 { color: var(--white-2); font-size: var(--fs-6); margin-bottom: 4px; font-weight: 600; }
 .cert-content p    { color: var(--light-gray-70); font-size: var(--fs-8); margin-bottom: 4px; }
-.cert-content time { color: var(--vegas-gold); font-size: var(--fs-8); font-weight: 600; }
+.cert-content time { color: var(--accent-light); font-size: var(--fs-8); font-weight: 600; opacity: 0.85; }
 
 /* ==========================================
    RESEARCH
@@ -676,7 +727,7 @@ article.active {
 }
 
 .form-input::placeholder { color: var(--light-gray-70); }
-.form-input:focus { border-color: var(--gold); }
+.form-input:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-dim); }
 
 .form-btn {
   display: flex;
@@ -710,7 +761,7 @@ article.active {
    ========================================== */
 .type-cursor {
   display: inline-block;
-  color: var(--gold);
+  color: var(--accent-light);
   animation: blink 1s step-end infinite;
 }
 
