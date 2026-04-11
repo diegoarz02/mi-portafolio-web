@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs>
+    <linearGradient id="bg1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="line1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#818cf8" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.6"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#bg1)"/>
+  <!-- Grid dots -->
+  <g opacity="0.08">
+    <circle cx="60" cy="60" r="1.5" fill="#a5b4fc"/>
+    <circle cx="120" cy="60" r="1.5" fill="#a5b4fc"/>
+    <circle cx="180" cy="60" r="1.5" fill="#a5b4fc"/>
+    <circle cx="60" cy="120" r="1.5" fill="#a5b4fc"/>
+    <circle cx="120" cy="120" r="1.5" fill="#a5b4fc"/>
+    <circle cx="180" cy="120" r="1.5" fill="#a5b4fc"/>
+  </g>
+  <!-- Connections -->
+  <line x1="135" y1="90" x2="245" y2="70" stroke="#818cf8" stroke-width="1" opacity="0.2"/>
+  <line x1="135" y1="90" x2="245" y2="120" stroke="#818cf8" stroke-width="1" opacity="0.2"/>
+  <line x1="135" y1="90" x2="245" y2="170" stroke="#818cf8" stroke-width="1" opacity="0.15"/>
+  <line x1="135" y1="140" x2="245" y2="70" stroke="#818cf8" stroke-width="1" opacity="0.15"/>
+  <line x1="135" y1="140" x2="245" y2="120" stroke="#818cf8" stroke-width="1.5" opacity="0.35"/>
+  <line x1="135" y1="140" x2="245" y2="170" stroke="#818cf8" stroke-width="1.5" opacity="0.35"/>
+  <line x1="135" y1="190" x2="245" y2="120" stroke="#818cf8" stroke-width="1" opacity="0.2"/>
+  <line x1="135" y1="190" x2="245" y2="170" stroke="#818cf8" stroke-width="1.5" opacity="0.35"/>
+  <line x1="135" y1="190" x2="245" y2="220" stroke="#818cf8" stroke-width="1" opacity="0.2"/>
+  <line x1="265" y1="70" x2="375" y2="95" stroke="#a78bfa" stroke-width="1.5" opacity="0.4"/>
+  <line x1="265" y1="120" x2="375" y2="95" stroke="#a78bfa" stroke-width="2" opacity="0.55"/>
+  <line x1="265" y1="120" x2="375" y2="155" stroke="#a78bfa" stroke-width="2" opacity="0.55"/>
+  <line x1="265" y1="170" x2="375" y2="155" stroke="#a78bfa" stroke-width="1.5" opacity="0.4"/>
+  <line x1="265" y1="170" x2="375" y2="205" stroke="#a78bfa" stroke-width="1.5" opacity="0.4"/>
+  <line x1="265" y1="220" x2="375" y2="205" stroke="#a78bfa" stroke-width="1" opacity="0.3"/>
+  <line x1="393" y1="95" x2="463" y2="155" stroke="#c4b5fd" stroke-width="2" opacity="0.65"/>
+  <line x1="393" y1="155" x2="463" y2="155" stroke="#c4b5fd" stroke-width="2.5" opacity="0.8"/>
+  <line x1="393" y1="205" x2="463" y2="155" stroke="#c4b5fd" stroke-width="2" opacity="0.65"/>
+  <!-- Input nodes -->
+  <circle cx="135" cy="90" r="11" fill="none" stroke="#818cf8" stroke-width="1.8" opacity="0.7"/>
+  <circle cx="135" cy="140" r="11" fill="none" stroke="#818cf8" stroke-width="1.8" opacity="0.7"/>
+  <circle cx="135" cy="190" r="11" fill="none" stroke="#818cf8" stroke-width="1.8" opacity="0.7"/>
+  <!-- Hidden layer 1 -->
+  <circle cx="255" cy="70" r="13" fill="#3730a3" stroke="#818cf8" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="255" cy="120" r="13" fill="#3730a3" stroke="#818cf8" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="255" cy="170" r="13" fill="#3730a3" stroke="#818cf8" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="255" cy="220" r="13" fill="#3730a3" stroke="#818cf8" stroke-width="1.5" opacity="0.9"/>
+  <!-- Hidden layer 2 -->
+  <circle cx="383" cy="95" r="13" fill="#5b21b6" stroke="#a78bfa" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="383" cy="155" r="13" fill="#5b21b6" stroke="#a78bfa" stroke-width="1.5" opacity="0.9"/>
+  <circle cx="383" cy="205" r="13" fill="#5b21b6" stroke="#a78bfa" stroke-width="1.5" opacity="0.9"/>
+  <!-- Output -->
+  <circle cx="473" cy="155" r="17" fill="#7c3aed" stroke="#c4b5fd" stroke-width="2"/>
+  <circle cx="473" cy="155" r="9" fill="#ddd6fe" opacity="0.9"/>
+  <!-- Labels -->
+  <text x="135" y="55" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#a5b4fc" opacity="0.6" letter-spacing="1">INPUT</text>
+  <text x="319" y="40" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#a5b4fc" opacity="0.6" letter-spacing="1">HIDDEN LAYERS</text>
+  <text x="473" y="120" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#a5b4fc" opacity="0.6" letter-spacing="1">OUTPUT</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="246" width="600" height="54" fill="rgba(10,5,30,0.88)"/>
+  <text x="24" y="269" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Hub Interactivo Deep Learning</text>
+  <text x="24" y="287" font-family="Inter,sans-serif" font-size="11" fill="#a5b4fc">TensorFlow · FastAPI · Fashion-MNIST · MLP · CNN · RNN</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs>
+    <linearGradient id="bg3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2e1065"/>
+      <stop offset="100%" stop-color="#6b21a8"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#bg3)"/>
+  <!-- Axes -->
+  <line x1="80" y1="210" x2="540" y2="210" stroke="#c4b5fd" stroke-width="1" opacity="0.3"/>
+  <line x1="80" y1="50" x2="80" y2="210" stroke="#c4b5fd" stroke-width="1" opacity="0.3"/>
+  <!-- Cluster 1: top-left - Indigo -->
+  <ellipse cx="180" cy="110" rx="55" ry="45" fill="#4f46e5" opacity="0.12"/>
+  <circle cx="155" cy="95" r="5" fill="#818cf8" opacity="0.9"/>
+  <circle cx="175" cy="85" r="4" fill="#818cf8" opacity="0.8"/>
+  <circle cx="195" cy="100" r="5" fill="#818cf8" opacity="0.9"/>
+  <circle cx="165" cy="120" r="4" fill="#818cf8" opacity="0.8"/>
+  <circle cx="190" cy="130" r="5" fill="#818cf8" opacity="0.85"/>
+  <circle cx="205" cy="110" r="4" fill="#818cf8" opacity="0.75"/>
+  <circle cx="160" cy="110" r="3.5" fill="#818cf8" opacity="0.8"/>
+  <!-- Centroid 1 -->
+  <circle cx="180" cy="108" r="8" fill="none" stroke="#818cf8" stroke-width="2" opacity="0.9"/>
+  <circle cx="180" cy="108" r="3" fill="#c4b5fd"/>
+  <!-- Cluster 2: bottom-center - Violet -->
+  <ellipse cx="320" cy="175" rx="60" ry="38" fill="#7c3aed" opacity="0.12"/>
+  <circle cx="290" cy="168" r="5" fill="#c084fc" opacity="0.9"/>
+  <circle cx="310" cy="185" r="4" fill="#c084fc" opacity="0.8"/>
+  <circle cx="330" cy="160" r="5" fill="#c084fc" opacity="0.9"/>
+  <circle cx="350" cy="178" r="4" fill="#c084fc" opacity="0.8"/>
+  <circle cx="305" cy="155" r="4.5" fill="#c084fc" opacity="0.85"/>
+  <circle cx="340" cy="190" r="4" fill="#c084fc" opacity="0.75"/>
+  <circle cx="320" cy="195" r="3.5" fill="#c084fc" opacity="0.8"/>
+  <circle cx="355" cy="160" r="4" fill="#c084fc" opacity="0.8"/>
+  <!-- Centroid 2 -->
+  <circle cx="322" cy="173" r="8" fill="none" stroke="#c084fc" stroke-width="2" opacity="0.9"/>
+  <circle cx="322" cy="173" r="3" fill="#e9d5ff"/>
+  <!-- Cluster 3: right - Pink/Rose -->
+  <ellipse cx="450" cy="100" rx="52" ry="50" fill="#be185d" opacity="0.12"/>
+  <circle cx="425" cy="85" r="5" fill="#f472b6" opacity="0.9"/>
+  <circle cx="445" cy="75" r="4" fill="#f472b6" opacity="0.8"/>
+  <circle cx="465" cy="90" r="5" fill="#f472b6" opacity="0.9"/>
+  <circle cx="480" cy="105" r="4" fill="#f472b6" opacity="0.8"/>
+  <circle cx="430" cy="115" r="4.5" fill="#f472b6" opacity="0.85"/>
+  <circle cx="460" cy="120" r="4" fill="#f472b6" opacity="0.75"/>
+  <circle cx="445" cy="135" r="3.5" fill="#f472b6" opacity="0.8"/>
+  <circle cx="475" cy="78" r="4" fill="#f472b6" opacity="0.8"/>
+  <!-- Centroid 3 -->
+  <circle cx="452" cy="100" r="8" fill="none" stroke="#f472b6" stroke-width="2" opacity="0.9"/>
+  <circle cx="452" cy="100" r="3" fill="#fbcfe8"/>
+  <!-- Cluster labels -->
+  <text x="180" y="72" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#a5b4fc" opacity="0.7">Cluster A</text>
+  <text x="322" y="228" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#d8b4fe" opacity="0.7">Cluster B</text>
+  <text x="452" y="65" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" fill="#f9a8d4" opacity="0.7">Cluster C</text>
+  <!-- K-Means label -->
+  <text x="87" y="42" font-family="Inter,sans-serif" font-size="10" fill="#c4b5fd" opacity="0.55" letter-spacing="1">K-MEANS CLUSTERING · ENAPREF</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="246" width="600" height="54" fill="rgba(18,5,40,0.9)"/>
+  <text x="24" y="269" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Motor Algorítmico K-Means</text>
+  <text x="24" y="287" font-family="Inter,sans-serif" font-size="11" fill="#c4b5fd">Python · K-Means · ENAPREF · Feature Engineering</text>
+</svg>
