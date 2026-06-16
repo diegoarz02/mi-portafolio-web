@@ -6,6 +6,11 @@
 # Documentos de trabajo (no forman parte del sitio)
 PROMPT_claude_code_portafolio.md
 CV_instrucciones_actualizacion.md
+PASO_FINAL_push.md
+PROMPT_claude_code_push_final.md
+# Patrones para futuros prompts/instrucciones de trabajo
+PROMPT_*.md
+PASO_*.md
 
 # Material fuente / versiones antiguas no usadas por la web
 ARAUJO VILLEGAS DIEGO ALONSO (2) (1).pdf
