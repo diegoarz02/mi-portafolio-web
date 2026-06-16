@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs>
+    <linearGradient id="bgMel" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#172554"/>
+      <stop offset="100%" stop-color="#3b0764"/>
+    </linearGradient>
+    <radialGradient id="camMel" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.85"/>
+      <stop offset="45%" stop-color="#f97316" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#7c3aed" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="lensMel" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#312e81" stop-opacity="0"/>
+      <stop offset="80%" stop-color="#1e1b4b" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#0a0820" stop-opacity="0.6"/>
+    </radialGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#bgMel)"/>
+  <!-- Grid dots -->
+  <g opacity="0.07" fill="#a5b4fc">
+    <circle cx="60" cy="60" r="1.5"/><circle cx="120" cy="60" r="1.5"/><circle cx="180" cy="60" r="1.5"/>
+    <circle cx="60" cy="120" r="1.5"/><circle cx="120" cy="120" r="1.5"/><circle cx="180" cy="120" r="1.5"/>
+  </g>
+  <!-- Dermatoscopic lens -->
+  <g>
+    <circle cx="185" cy="125" r="92" fill="#1e1b4b" opacity="0.5"/>
+    <!-- Grad-CAM heatmap over stylized lesion -->
+    <ellipse cx="185" cy="125" rx="62" ry="52" fill="url(#camMel)"/>
+    <!-- Abstract irregular lesion border -->
+    <path d="M 150 95 C 160 78 215 80 222 105 C 236 120 228 158 200 165 C 172 174 138 158 140 130 C 141 113 142 105 150 95 Z"
+          fill="none" stroke="#fcd34d" stroke-width="1.6" opacity="0.65"/>
+    <path d="M 162 110 C 178 100 205 108 204 128 C 202 148 178 152 166 140 C 156 130 154 118 162 110 Z"
+          fill="none" stroke="#fb923c" stroke-width="1.2" opacity="0.5"/>
+    <!-- lens vignette + ring -->
+    <circle cx="185" cy="125" r="92" fill="url(#lensMel)"/>
+    <circle cx="185" cy="125" r="92" fill="none" stroke="#818cf8" stroke-width="2" opacity="0.55"/>
+    <circle cx="185" cy="125" r="98" fill="none" stroke="#a78bfa" stroke-width="1" opacity="0.3"/>
+    <!-- crosshair -->
+    <line x1="185" y1="40" x2="185" y2="58" stroke="#a5b4fc" stroke-width="1" opacity="0.4"/>
+    <line x1="185" y1="192" x2="185" y2="210" stroke="#a5b4fc" stroke-width="1" opacity="0.4"/>
+    <line x1="100" y1="125" x2="118" y2="125" stroke="#a5b4fc" stroke-width="1" opacity="0.4"/>
+    <line x1="252" y1="125" x2="270" y2="125" stroke="#a5b4fc" stroke-width="1" opacity="0.4"/>
+  </g>
+  <!-- CAM intensity legend -->
+  <g transform="translate(312, 70)">
+    <text x="0" y="-6" font-family="Inter,sans-serif" font-size="9" fill="#c4b5fd" opacity="0.7" letter-spacing="1">GRAD-CAM</text>
+    <rect x="0" y="0" width="14" height="14" fill="#7c3aed" opacity="0.55"/>
+    <rect x="0" y="16" width="14" height="14" fill="#f97316" opacity="0.6"/>
+    <rect x="0" y="32" width="14" height="14" fill="#fbbf24" opacity="0.85"/>
+    <text x="22" y="11" font-family="Inter,sans-serif" font-size="8" fill="#a5b4fc" opacity="0.7">bajo</text>
+    <text x="22" y="43" font-family="Inter,sans-serif" font-size="8" fill="#fde68a" opacity="0.8">alto</text>
+  </g>
+  <!-- Classification bars: benign vs malignant -->
+  <g transform="translate(312, 130)">
+    <text x="0" y="0" font-family="Inter,sans-serif" font-size="9" fill="#86efac" opacity="0.85">benigno</text>
+    <rect x="60" y="-9" width="130" height="11" rx="3" fill="#1e1b4b" opacity="0.6"/>
+    <rect x="60" y="-9" width="44" height="11" rx="3" fill="#4ade80" opacity="0.7"/>
+    <text x="0" y="26" font-family="Inter,sans-serif" font-size="9" fill="#fca5a5" opacity="0.85">maligno</text>
+    <rect x="60" y="17" width="130" height="11" rx="3" fill="#1e1b4b" opacity="0.6"/>
+    <rect x="60" y="17" width="100" height="11" rx="3" fill="#f87171" opacity="0.75"/>
+  </g>
+  <!-- AUC stat -->
+  <rect x="372" y="178" width="128" height="40" rx="6" fill="rgba(251,191,36,0.12)" stroke="#fcd34d" stroke-width="0.9" opacity="0.85"/>
+  <text x="436" y="196" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fcd34d">AUC-ROC 0.896</text>
+  <text x="436" y="210" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fde68a" opacity="0.8">Inception-v3 · transfer learning</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="246" width="600" height="54" fill="rgba(10,8,30,0.9)"/>
+  <text x="24" y="269" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Detección de Melanoma · Transfer Learning</text>
+  <text x="24" y="287" font-family="Inter,sans-serif" font-size="11" fill="#c4b5fd">Inception-v3 · Grad-CAM · TensorFlow · Keras</text>
+</svg>

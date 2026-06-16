@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diego Araujo | Data Scientist & ML Engineer</title>
-  <meta name="description" content="Portafolio de Diego Araujo — Data Scientist, ML Engineer e IA. UNMSM Top 10%, BCP, Matsuo Lab - Universidad de Tokyo.">
+  <title>Diego Araujo | Data Scientist · ML/AI Engineer · MLOps</title>
+  <meta name="description" content="Portafolio de Diego Araujo — Data Scientist, ML/AI Engineer y MLOps. Machine Learning, Deep Learning, NLP e IA Generativa. UNMSM Top 10%, BCP, Matsuo Lab - Universidad de Tokyo.">
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -183,7 +183,7 @@
             </div>
             <div class="service-content-box">
               <h4 class="h4 service-item-title">Analytics & Visualización</h4>
-              <p class="service-item-text">Dashboards interactivos en Power BI y Tableau, análisis exploratorio y comunicación de insights a stakeholders no técnicos.</p>
+              <p class="service-item-text">Dashboards interactivos en Power BI, análisis exploratorio y comunicación de insights a stakeholders no técnicos.</p>
             </div>
           </li>
           <li class="service-item">
@@ -201,7 +201,7 @@
             </div>
             <div class="service-content-box">
               <h4 class="h4 service-item-title">IA Generativa & NLP</h4>
-              <p class="service-item-text">Pipelines con LLMs, RAG y fine-tuning. Experiencia con OpenAI API, LangChain y modelos de lenguaje en producción.</p>
+              <p class="service-item-text">Pipelines con LLMs, RAG y fine-tuning. Experiencia con Azure OpenAI, LangGraph y agentes de razonamiento en producción.</p>
             </div>
           </li>
         </ul>
@@ -328,6 +328,14 @@
               <div class="title-wrapper"><h5 class="h5">Computer Vision</h5><data value="85">85%</data></div>
               <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="85"></div></div>
             </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">MLflow / MLOps</h5><data value="85">85%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="85"></div></div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper"><h5 class="h5">SHAP / Explicabilidad</h5><data value="85">85%</data></div>
+              <div class="skill-progress-bg"><div class="skill-progress-fill" style="width:0" data-pct="85"></div></div>
+            </li>
           </ul>
         </div>
 
@@ -405,13 +413,58 @@
 
       <ul class="project-list">
         <li class="project-item">
-          <a href="https://proyecto-redes-neuronales.onrender.com/" target="_blank" rel="noopener">
+          <a href="https://minsur-quality-prediction.onrender.com/" target="_blank" rel="noopener">
             <figure class="project-img">
-              <img src="img/project-dl.svg" alt="Hub Interactivo Deep Learning" loading="lazy">
+              <img src="img/project-mining.svg" alt="Sistema MLOps · Predicción de Calidad en Minería" loading="lazy">
+            </figure>
+            <div class="project-content">
+              <p class="project-category">MLOps · Data Science</p>
+              <h3 class="project-title">Sistema MLOps · Predicción de Calidad en Minería</h3>
+              <p class="project-desc">Sistema end-to-end que predice el % de sílice del concentrado una hora antes del laboratorio. Validación temporal sin fuga, MLflow, explicabilidad SHAP, simulación what-if y un agente de razonamiento (LangGraph) servido en una API FastAPI con interfaz web.</p>
+              <div class="project-tags">
+                <span>LightGBM</span><span>MLflow</span><span>SHAP</span><span>LangGraph</span><span>FastAPI</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="https://github.com/diegoarz02/nlp-olist-sentiment-analysis" target="_blank" rel="noopener">
+            <figure class="project-img">
+              <img src="img/project-nlp.svg" alt="Inteligencia de Fricción en E-Commerce · Olist" loading="lazy">
+            </figure>
+            <div class="project-content">
+              <p class="project-category">NLP · Inferencia Causal</p>
+              <h3 class="project-title">Inteligencia de Fricción en E-Commerce · Olist</h3>
+              <p class="project-desc">Análisis de sentimientos sobre ~100 000 reseñas reales en portugués del marketplace Olist: NLP con ABSA validado con BERT multilingüe, inferencia causal con DoWhy (el retraso en la entrega como driver causal, OR≈2.5–3.5) y un motor preventivo de riesgo.</p>
+              <div class="project-tags">
+                <span>BERT</span><span>DoWhy</span><span>Polars</span><span>ABSA</span><span>NLP</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="https://github.com/diegoarz02/transfer-learning" target="_blank" rel="noopener">
+            <figure class="project-img">
+              <img src="img/project-melanoma.svg" alt="Detección de Melanoma · Transfer Learning" loading="lazy">
             </figure>
             <div class="project-content">
               <p class="project-category">Deep Learning · Computer Vision</p>
-              <h3 class="project-title">Hub Interactivo Deep Learning</h3>
+              <h3 class="project-title">Detección de Melanoma · Transfer Learning</h3>
+              <p class="project-desc">Clasificador de imágenes dermatoscópicas (benigno vs. maligno) con transfer learning sobre Inception-v3 y entrenamiento bifásico. AUC-ROC de 0.896, enfoque clínico priorizando sensibilidad e interpretabilidad con Grad-CAM.</p>
+              <div class="project-tags">
+                <span>Inception-v3</span><span>Grad-CAM</span><span>TensorFlow</span><span>Keras</span>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li class="project-item">
+          <a href="https://proyecto-redes-neuronales.onrender.com/" target="_blank" rel="noopener">
+            <figure class="project-img">
+              <img src="img/project-dl.svg" alt="Hub Interactivo Deep Learning · MLP vs CNN vs RNN" loading="lazy">
+            </figure>
+            <div class="project-content">
+              <p class="project-category">Deep Learning · Computer Vision</p>
+              <h3 class="project-title">Hub Interactivo Deep Learning · MLP vs CNN vs RNN</h3>
               <p class="project-desc">API en FastAPI que sirve modelos profundos (MLP, CNN, RNN) sobre Fashion-MNIST. Lienzo web de inferencia en tiempo real con visualización de matrices de confusión y heatmaps de activación.</p>
               <div class="project-tags">
                 <span>TensorFlow</span><span>FastAPI</span><span>Fashion-MNIST</span><span>Python</span>
@@ -420,46 +473,16 @@
           </a>
         </li>
         <li class="project-item">
-          <a href="https://rpubs.com/diegoaaraujo24003/1397209" target="_blank" rel="noopener">
+          <a href="https://github.com/diegoarz02/GCI-Final-Telecom-Churn" target="_blank" rel="noopener">
             <figure class="project-img">
-              <img src="img/project-poverty.svg" alt="Índice de Pobreza Educativa" loading="lazy">
+              <img src="img/project-churn.svg" alt="Retención de Clientes Telecom · GCI Tokyo" loading="lazy">
             </figure>
             <div class="project-content">
-              <p class="project-category">Machine Learning · Políticas Públicas</p>
-              <h3 class="project-title">Índice de Pobreza Educativa · Perú</h3>
-              <p class="project-desc">Análisis de Correspondencias Múltiples sobre millones de registros de hogares peruanos. Dashboard con mapas de brechas territoriales para orientar políticas públicas basadas en evidencia.</p>
+              <p class="project-category">Data Science · University of Tokyo</p>
+              <h3 class="project-title">Retención de Clientes Telecom · GCI Tokyo</h3>
+              <p class="project-desc">Proyecto final del programa GCI del Matsuo-Iwasawa Lab (University of Tokyo): de datos crudos a una propuesta de negocio con impacto cuantificado. EDA, XGBoost, SHAP y un modelo de ROI transparente; ~79% de churn capturado en el decil de mayor riesgo.</p>
               <div class="project-tags">
-                <span>R</span><span>ACM</span><span>Geoespacial</span><span>Políticas Públicas</span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="project-item">
-          <a href="https://github.com/diegoarz02/K-means/blob/main/GLN_KMN.pdf" target="_blank" rel="noopener">
-            <figure class="project-img">
-              <img src="img/project-kmeans.svg" alt="Motor K-Means ENAPREF" loading="lazy">
-            </figure>
-            <div class="project-content">
-              <p class="project-category">Clustering · Inteligencia Comercial</p>
-              <h3 class="project-title">Motor Algorítmico K-Means · ENAPREF</h3>
-              <p class="project-desc">Feature Engineering sobre la matriz ENAPREF combinado con K-Means no supervisado para segmentar mercados de Lima Norte. Perfiles de consumo diferenciados para inteligencia comercial.</p>
-              <div class="project-tags">
-                <span>Python</span><span>K-Means</span><span>ENAPREF</span><span>Feature Engineering</span>
-              </div>
-            </div>
-          </a>
-        </li>
-        <li class="project-item">
-          <a href="https://github.com/diegoarz02/Modelo-de-Prediccion-de-riesgo-de-infarto/blob/main/ARAUJO_DIEGO_PROYECTO_FINAL_DS.ipynb" target="_blank" rel="noopener">
-            <figure class="project-img">
-              <img src="img/project-cardio.svg" alt="Forecasting Riesgo Coronario" loading="lazy">
-            </figure>
-            <div class="project-content">
-              <p class="project-category">ML · HealthTech</p>
-              <h3 class="project-title">Forecasting de Riesgo Coronario</h3>
-              <p class="project-desc">Pipeline completo de ML (SMOTE + Gradient Boosting) sobre historiales clínicos para modelos de alerta temprana cardíaca. Infraestructura lista para integración en startups de HealthTech.</p>
-              <div class="project-tags">
-                <span>SMOTE</span><span>Gradient Boosting</span><span>HealthTech</span><span>Python</span>
+                <span>XGBoost</span><span>SHAP</span><span>ROI Model</span><span>Python</span>
               </div>
             </div>
           </a>
@@ -475,14 +498,16 @@
 
       <ul class="cert-list">
         <li class="cert-item">
-          <div class="cert-icon-box">
-            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-          </div>
-          <div class="cert-content">
-            <h4 class="h4">Advanced Machine Learning con TensorFlow y Keras</h4>
-            <p>DMC</p>
-            <time>Abr 2026 — Actualidad</time>
-          </div>
+          <a href="Certificado DMC AML.pdf" target="_blank" rel="noopener" class="cert-link">
+            <div class="cert-icon-box">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+            </div>
+            <div class="cert-content">
+              <h4 class="h4">Advanced Machine Learning con TensorFlow y Keras</h4>
+              <p>DMC</p>
+              <time>Abr 2026 — May 2026</time>
+            </div>
+          </a>
         </li>
         <li class="cert-item">
           <a href="Certificado ML.pdf" target="_blank" rel="noopener" class="cert-link">

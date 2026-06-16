@@ -2,7 +2,7 @@
    CONFIG
    ========================================== */
 const GITHUB_USER = 'diegoarz02';
-const TYPEWRITER  = ['Data Scientist', 'ML Engineer', 'AI Developer', 'Estadístico', 'Analytics Translator'];
+const TYPEWRITER  = ['Data Scientist', 'ML Engineer', 'AI Engineer', 'MLOps', 'AI Developer', 'Estadístico', 'Analytics Translator'];
 
 /* ==========================================
    SIDEBAR TOGGLE
@@ -87,11 +87,34 @@ async function loadGitHubRepos() {
   const $grid = document.getElementById('github-grid');
   if (!$grid) return;
 
+  // Repos destacados (pinned): se muestran primero, en este orden exacto.
+  const FEATURED = [
+    'mining-quality-prediction',
+    'nlp-olist-sentiment-analysis',
+    'transfer-learning',
+    'GCI-Final-Telecom-Churn',
+    'GCI-Competition-NFL-Draft',
+    'Proyecto-redes-neuronales'
+  ];
+  const featuredRank = name => {
+    const i = FEATURED.findIndex(f => f.toLowerCase() === (name || '').toLowerCase());
+    return i === -1 ? Infinity : i;
+  };
+
   try {
-    const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=12`);
+    const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?sort=updated&per_page=30`);
     if (!res.ok) throw new Error();
     const repos = await res.json();
-    const filtered = repos.filter(r => !r.fork).slice(0, 8);
+    const sorted = repos
+      .filter(r => !r.fork)
+      .sort((a, b) => {
+        const ra = featuredRank(a.name), rb = featuredRank(b.name);
+        if (ra !== rb) return ra - rb;                       // destacados primero
+        return new Date(b.pushed_at || b.updated_at) - new Date(a.pushed_at || a.updated_at);
+      });
+    // Oculta repos sin descripción para una grilla más pro, pero garantiza ≥8 tarjetas.
+    const described = sorted.filter(r => r.description);
+    const filtered = (described.length >= 8 ? described : sorted).slice(0, 8);
 
     if (!filtered.length) {
       $grid.innerHTML = '<p class="loading-repos">No se encontraron repositorios.</p>';

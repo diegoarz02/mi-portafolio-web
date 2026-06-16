@@ -1,0 +1,74 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs>
+    <linearGradient id="bgMin" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#172554"/>
+      <stop offset="100%" stop-color="#4c1d95"/>
+    </linearGradient>
+    <linearGradient id="predMin" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#fcd34d"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#bgMin)"/>
+  <!-- Grid lines -->
+  <g stroke="#a5b4fc" stroke-width="0.5" opacity="0.08">
+    <line x1="0" y1="80" x2="600" y2="80"/>
+    <line x1="0" y1="130" x2="600" y2="130"/>
+    <line x1="0" y1="180" x2="600" y2="180"/>
+    <line x1="120" y1="40" x2="120" y2="220"/>
+    <line x1="240" y1="40" x2="240" y2="220"/>
+    <line x1="360" y1="40" x2="360" y2="220"/>
+    <line x1="480" y1="40" x2="480" y2="220"/>
+  </g>
+  <!-- Flotation cells (process tanks) -->
+  <g>
+    <rect x="55" y="150" width="58" height="62" rx="4" fill="#312e81" stroke="#818cf8" stroke-width="1.5" opacity="0.85"/>
+    <rect x="123" y="150" width="58" height="62" rx="4" fill="#3730a3" stroke="#818cf8" stroke-width="1.5" opacity="0.85"/>
+    <rect x="191" y="150" width="58" height="62" rx="4" fill="#4c1d95" stroke="#a78bfa" stroke-width="1.5" opacity="0.85"/>
+    <!-- launder pipe connecting cells -->
+    <line x1="84" y1="150" x2="84" y2="138" stroke="#a78bfa" stroke-width="2" opacity="0.6"/>
+    <line x1="152" y1="150" x2="152" y2="138" stroke="#a78bfa" stroke-width="2" opacity="0.6"/>
+    <line x1="220" y1="150" x2="220" y2="138" stroke="#a78bfa" stroke-width="2" opacity="0.6"/>
+    <line x1="84" y1="138" x2="220" y2="138" stroke="#a78bfa" stroke-width="2" opacity="0.5"/>
+  </g>
+  <!-- Rising froth bubbles -->
+  <g fill="#fcd34d">
+    <circle cx="72" cy="160" r="3" opacity="0.85"/>
+    <circle cx="92" cy="148" r="4" opacity="0.7"/>
+    <circle cx="100" cy="166" r="2.5" opacity="0.6"/>
+    <circle cx="140" cy="158" r="3.5" opacity="0.8"/>
+    <circle cx="160" cy="146" r="3" opacity="0.65"/>
+    <circle cx="168" cy="168" r="2.5" opacity="0.55"/>
+    <circle cx="208" cy="156" r="4" opacity="0.8"/>
+    <circle cx="228" cy="147" r="3" opacity="0.6"/>
+    <circle cx="236" cy="167" r="2.5" opacity="0.7"/>
+  </g>
+  <g fill="#a5b4fc">
+    <circle cx="64" cy="172" r="2" opacity="0.5"/>
+    <circle cx="132" cy="174" r="2" opacity="0.5"/>
+    <circle cx="200" cy="172" r="2" opacity="0.5"/>
+  </g>
+  <!-- Descending silica prediction curve -->
+  <path d="M 300 95 C 360 110 410 150 470 180 S 540 205 555 200"
+        fill="none" stroke="url(#predMin)" stroke-width="2.8" stroke-linecap="round"/>
+  <!-- Actual (lab) curve, lagging -->
+  <path d="M 300 110 C 358 128 408 162 468 192 S 540 212 555 210"
+        fill="none" stroke="#818cf8" stroke-width="1.6" stroke-dasharray="5 4" opacity="0.6"/>
+  <!-- Prediction points -->
+  <circle cx="300" cy="95" r="4" fill="#fcd34d"/>
+  <circle cx="300" cy="95" r="9" fill="#fcd34d" opacity="0.2"/>
+  <circle cx="470" cy="180" r="3.5" fill="#fcd34d" opacity="0.9"/>
+  <!-- 1h-ahead marker -->
+  <line x1="385" y1="60" x2="385" y2="210" stroke="#fcd34d" stroke-width="0.8" stroke-dasharray="3 3" opacity="0.4"/>
+  <text x="390" y="68" font-family="Inter,sans-serif" font-size="9" fill="#fcd34d" opacity="0.7">t + 1h</text>
+  <!-- Stat box: %SiO2 -->
+  <rect x="455" y="62" width="100" height="40" rx="6" fill="rgba(251,191,36,0.12)" stroke="#fcd34d" stroke-width="0.9" opacity="0.85"/>
+  <text x="505" y="80" text-anchor="middle" font-family="Inter,sans-serif" font-size="13" font-weight="700" fill="#fcd34d">% Sílice</text>
+  <text x="505" y="94" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fde68a" opacity="0.8">predicción concentrado</text>
+  <!-- Section label -->
+  <text x="55" y="135" font-family="Inter,sans-serif" font-size="9" fill="#c4b5fd" opacity="0.6" letter-spacing="1">CELDAS DE FLOTACIÓN</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="246" width="600" height="54" fill="rgba(12,8,40,0.9)"/>
+  <text x="24" y="269" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Predicción de Calidad en Minería · MLOps</text>
+  <text x="24" y="287" font-family="Inter,sans-serif" font-size="11" fill="#c4b5fd">LightGBM · MLflow · SHAP · LangGraph · FastAPI</text>
+</svg>

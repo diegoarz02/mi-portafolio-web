@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 300" width="600" height="300">
+  <defs>
+    <linearGradient id="bgNlp" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#5b21b6"/>
+    </linearGradient>
+    <linearGradient id="waveNlp" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#fcd34d" stop-opacity="0.7"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="300" fill="url(#bgNlp)"/>
+  <!-- Grid dots -->
+  <g opacity="0.07" fill="#a5b4fc">
+    <circle cx="60" cy="60" r="1.5"/><circle cx="140" cy="60" r="1.5"/><circle cx="220" cy="60" r="1.5"/>
+    <circle cx="60" cy="120" r="1.5"/><circle cx="140" cy="120" r="1.5"/><circle cx="220" cy="120" r="1.5"/>
+  </g>
+  <!-- Causal graph: delay -> sentiment -> risk -->
+  <g>
+    <line x1="115" y1="100" x2="225" y2="100" stroke="#fcd34d" stroke-width="2" opacity="0.6"/>
+    <polygon points="225,100 217,96 217,104" fill="#fcd34d" opacity="0.7"/>
+    <line x1="255" y1="100" x2="360" y2="155" stroke="#a78bfa" stroke-width="1.8" opacity="0.55"/>
+    <polygon points="360,155 351,153 355,146" fill="#a78bfa" opacity="0.65"/>
+    <!-- delay node -->
+    <circle cx="90" cy="100" r="22" fill="#3730a3" stroke="#818cf8" stroke-width="1.5" opacity="0.95"/>
+    <text x="90" y="97" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#c7d2fe">Retraso</text>
+    <text x="90" y="107" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#c7d2fe">entrega</text>
+    <!-- sentiment node -->
+    <circle cx="240" cy="100" r="22" fill="#5b21b6" stroke="#a78bfa" stroke-width="1.5" opacity="0.95"/>
+    <text x="240" y="97" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#e9d5ff">Senti-</text>
+    <text x="240" y="107" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#e9d5ff">miento</text>
+    <!-- OR badge -->
+    <rect x="135" y="68" width="60" height="20" rx="10" fill="rgba(251,191,36,0.14)" stroke="#fcd34d" stroke-width="0.8" opacity="0.85"/>
+    <text x="165" y="82" text-anchor="middle" font-family="Inter,sans-serif" font-size="9" font-weight="700" fill="#fcd34d">OR ≈ 3.0</text>
+  </g>
+  <!-- Speech bubbles (reviews) -->
+  <g>
+    <path d="M 360 60 h 70 a 8 8 0 0 1 8 8 v 24 a 8 8 0 0 1 -8 8 h -50 l -10 10 v -10 h -10 a 8 8 0 0 1 -8 -8 v -24 a 8 8 0 0 1 8 -8 z"
+          fill="#312e81" stroke="#4ade80" stroke-width="1.3" opacity="0.9"/>
+    <circle cx="378" cy="80" r="3" fill="#4ade80"/><text x="388" y="84" font-family="Inter,sans-serif" font-size="9" fill="#86efac">positivo</text>
+    <path d="M 455 110 h 80 a 8 8 0 0 1 8 8 v 26 a 8 8 0 0 1 -8 8 h -55 l -10 10 v -10 h -15 a 8 8 0 0 1 -8 -8 v -26 a 8 8 0 0 1 8 -8 z"
+          fill="#3b0764" stroke="#f87171" stroke-width="1.3" opacity="0.9"/>
+    <circle cx="478" cy="131" r="3" fill="#f87171"/><text x="488" y="135" font-family="Inter,sans-serif" font-size="9" fill="#fca5a5">negativo</text>
+  </g>
+  <!-- risk node -->
+  <circle cx="375" cy="170" r="18" fill="#7c3aed" stroke="#fcd34d" stroke-width="1.8" opacity="0.95"/>
+  <text x="375" y="173" text-anchor="middle" font-family="Inter,sans-serif" font-size="8" fill="#fef3c7">Riesgo</text>
+  <!-- Text/sound waves (NLP signal) -->
+  <path d="M 70 200 q 20 -25 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0 t 40 0"
+        fill="none" stroke="url(#waveNlp)" stroke-width="2.4" stroke-linecap="round" opacity="0.8"/>
+  <!-- ABSA tokens -->
+  <g font-family="Inter,sans-serif" font-size="9" opacity="0.55">
+    <text x="465" y="200" fill="#c4b5fd">entrega</text>
+    <text x="520" y="190" fill="#c4b5fd">precio</text>
+    <text x="500" y="215" fill="#c4b5fd">calidad</text>
+  </g>
+  <text x="62" y="46" font-family="Inter,sans-serif" font-size="9" fill="#c4b5fd" opacity="0.6" letter-spacing="1">ABSA · INFERENCIA CAUSAL · ~100K RESEÑAS</text>
+  <!-- Bottom bar -->
+  <rect x="0" y="246" width="600" height="54" fill="rgba(12,8,40,0.9)"/>
+  <text x="24" y="269" font-family="Inter,sans-serif" font-size="14" font-weight="700" fill="#f1f5f9">Inteligencia de Fricción · Olist E-Commerce</text>
+  <text x="24" y="287" font-family="Inter,sans-serif" font-size="11" fill="#c4b5fd">BERT · DoWhy · Polars · ABSA · NLP</text>
+</svg>
