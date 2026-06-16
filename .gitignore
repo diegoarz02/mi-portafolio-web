@@ -1,0 +1,18 @@
+# El repo solo debe contener lo necesario para servir la web.
+
+# Herramientas / editor
+.claude/
+
+# Documentos de trabajo (no forman parte del sitio)
+PROMPT_claude_code_portafolio.md
+CV_instrucciones_actualizacion.md
+
+# Material fuente / versiones antiguas no usadas por la web
+ARAUJO VILLEGAS DIEGO ALONSO (2) (1).pdf
+Constancia de notas DMC AML.pdf
+Araujo_python.png
+bigdata.jpg
+
+# Artefactos temporales
+_preview.*
+*.tmp
