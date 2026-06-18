@@ -13,7 +13,7 @@ const $sidebarBtn = document.querySelector('[data-sidebar-btn]');
 if ($sidebar && $sidebarBtn) {
   $sidebarBtn.addEventListener('click', () => {
     const isOpen = $sidebar.classList.toggle('active');
-    $sidebarBtn.querySelector('span').textContent = isOpen ? 'Ocultar contactos' : 'Mostrar contactos';
+    $sidebarBtn.querySelector('span').textContent = isOpen ? 'Ocultar contacto' : 'Medios de contacto';
   });
 }
 
