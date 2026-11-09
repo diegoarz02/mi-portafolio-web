@@ -2,7 +2,7 @@
    CONFIG
    ========================================== */
 const GITHUB_USER = 'diegoarz02';
-const TYPEWRITER  = ['Estadístico', 'Data Scientist Junior', 'ML Engineer', 'AI Engineer', 'MLOps', 'Analytics Translator'];
+const TYPEWRITER  = ['Estadístico', 'Data Scientist', 'ML Engineer', 'AI Engineer', 'MLOps', 'Analytics Translator'];
 
 /* ==========================================
    SIDEBAR TOGGLE
